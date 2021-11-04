@@ -1,0 +1,28 @@
+
+@import 'src/scss/variables/colors';
+
+@import 'src/scss/variables/breakpoints';
+
+.sign-up-container {
+  color: $white;
+  @include xs {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.sign-up {
+  color: $blue-green;
+  @include xs {
+    margin-top: 5px;
+  }
+  text-decoration: underline;
+}
+
+.sign-up:hover {
+  color: $teal-blue;
+}
+
+.forgotPassword {
+  color: $white;
+}

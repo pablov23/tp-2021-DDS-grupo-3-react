@@ -1,0 +1,58 @@
+@import 'imports';
+
+.side-bar {
+  @extend .column,
+  .center;
+
+  background: $black;
+  border-radius: 0 20px 20px 0;
+  height: 100vh;
+  left: 0;
+  padding: 5px 20px;
+  position: absolute;
+  width: auto;
+}
+
+.sticky {
+  @extend .full-height;
+
+  @include sm {
+    position: absolute;
+  }
+  position: sticky;
+  top: 0;
+}
+
+.logo-container {
+  @extend .full-width;
+
+  align-self: flex-start;
+  @include lg {
+    align-self: center;
+    margin-top: 5px;
+    padding: 0 20px;
+  }
+  padding: 20px;
+}
+
+.logo {
+  height: 60px;
+  @include lg {
+    height: 40px;
+    margin: 0;
+    width: 120px;
+  }
+  object-fit: scale-down;
+  width: 150px;
+  @extend.m-top-2;
+}
+
+.close-button {
+  color: $white;
+  font-size: 20px;
+}
+
+.menu-button {
+  position: absolute;
+  top: 0;
+}

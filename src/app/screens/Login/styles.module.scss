@@ -1,0 +1,50 @@
+@import 'src/scss/variables/colors';
+
+@import 'src/scss/variables/breakpoints';
+
+.container {
+  background-color: $elephant;
+}
+
+.login-container {
+  border-radius: 10px;
+  @include xs {
+    height: 100%;
+    margin: 0;
+  }
+  margin-bottom: 20px;
+  margin-top: 20px;
+  max-width: 450px;
+}
+
+.login-form-container {
+  padding: 20px;
+}
+
+.login-banner {
+  bottom: 0;
+  max-height: 150px;
+  position: absolute;
+}
+
+.login-welcome {
+  color: $white;
+  font-size: 18px;
+  @include xs {
+    margin-bottom: 15px;
+  }
+  line-height: 23px;
+  margin-bottom: 25px;
+}
+
+.login-icon-title {
+  fill: $blue-green;
+  height: 200px;
+  @include xs {
+    height: 100px;
+    margin-bottom: 15px;
+    width: 100px;
+  }
+  margin-top: 20px;
+  width: 200px;
+}

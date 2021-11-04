@@ -1,0 +1,72 @@
+@import 'src/scss/variables/colors';
+
+@import 'src/scss/variables/variables';
+$container-size: 20px;
+$checkmark-size: $container-size/2;
+$mouse-over-bg-color: $light-gray;
+$checked-bg-color: $whisper;
+$bg-color: $azure-radiant;
+$checkmark-color: $white;
+
+.container {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.container input {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkmark {
+  align-items: center;
+  background-color: $checked-bg-color;
+  border-radius: 50%;
+  display: flex;
+  height: $container-size;
+  left: 0;
+  position: inherit;
+  top: 0;
+  transition: all $transition-duration ease-out;
+  width: $container-size;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: $mouse-over-bg-color;
+  cursor: pointer;
+}
+
+.container:hover input:disabled ~ .checkmark {
+  background-color: $checked-bg-color;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: $bg-color;
+}
+
+.container input:disabled ~ .checkmark {
+  border: 2px solid $mouse-over-bg-color;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.checkmark:after {
+  content: '';
+  display: none;
+  position: absolute;
+  transition: all $transition-duration ease-out;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  background: $checkmark-color;
+  border-radius: 50%;
+  height: $checkmark-size;
+  left: $checkmark-size/2;
+  top: $checkmark-size/2;
+  width: $checkmark-size;
+}

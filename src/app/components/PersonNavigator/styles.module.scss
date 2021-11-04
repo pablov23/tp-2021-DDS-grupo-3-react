@@ -1,0 +1,29 @@
+@import 'imports';
+$radius: 20px;
+
+.container {
+  @extend .column,
+  .full-width,
+  .full-height;
+
+  background-color: $elephant;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+  @include md {
+    border-radius: $radius;
+  }
+  padding: 15px 20px;
+}
+
+.nav-item {
+  @extend .row,
+  .start;
+
+  color: $white;
+  margin: 5px 0;
+  width: fit-content;
+}
+
+.nav-item-selected {
+  color: $blue-green;
+}

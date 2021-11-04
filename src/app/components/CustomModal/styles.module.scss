@@ -1,0 +1,81 @@
+@import 'imports';
+
+.modal-container {
+  @extend %appear;
+
+  background-color: $white;
+  border: 1px solid $dove-gray;
+  border-radius: $default-border-radius;
+  max-width: $max-width-modal-default;
+  outline: 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.modal-overlay {
+  position: fixed;
+  z-index: $modal-z-index;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($black, 0.5);
+}
+
+.close-button {
+  height: 20px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 20px;
+  z-index: 80;
+}
+
+.icon-close {
+  font-size: 20px;
+
+  &::before {
+    color: $silver;
+  }
+}
+
+.overlayIn {
+  @include animate(background-appear);
+}
+
+.overlayOut {
+  @include animate(background-disappear);
+}
+
+@keyframes background-appear {
+  from {
+    background: rgba($black, 0.1);
+  }
+
+  to {
+    background: rgba($black, 0.5);
+  }
+}
+
+@keyframes background-disappear {
+  from {
+    background: rgba($black, 0.5);
+  }
+
+  to {
+    background: rgba($black, 0.1);
+  }
+}
+
+.openAnimation {
+  @extend %appear-with-offset;
+}
+
+.closeAnimation {
+  @extend %disappear-with-offset;
+}

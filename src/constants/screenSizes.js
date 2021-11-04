@@ -1,0 +1,2 @@
+export const MAX_SMALL_DEVICE_WIDTH = 551;
+export const MAX_MEDIUM_DEVICE_WIDTH = 1200;

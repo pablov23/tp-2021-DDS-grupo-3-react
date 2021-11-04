@@ -1,0 +1,59 @@
+@import 'imports';
+$profile-size: 55px;
+
+.container {
+  @extend .column,
+  .full-width;
+}
+
+.profile-row {
+  @extend .row,
+  .full-width;
+
+  padding: 20px 40px;
+}
+
+.upper-row {
+  @extend .profile-row,
+  .middle,
+  .space-between;
+
+  background-color: $elephant;
+}
+
+.title {
+  color: $white;
+  font-size: 36px;
+}
+
+.lower-row {
+  @extend .profile-row;
+
+  background-color: $outer-space-crayola;
+  color: $white;
+  font-size: 25px;
+}
+
+.profile-container {
+  @extend .column,
+  .center;
+}
+
+.profile-picture-container {
+  background-color: $white;
+  border-radius: 100px;
+  height: $profile-size;
+  width: $profile-size;
+}
+
+.profile-picture {
+  height: 100%;
+  width: 100%;
+}
+
+.profile-title {
+  color: $white;
+  font-size: 14px;
+  line-height: 22px;
+  padding-top: 5px;
+}

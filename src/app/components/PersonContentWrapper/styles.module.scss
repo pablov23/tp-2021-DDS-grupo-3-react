@@ -1,0 +1,19 @@
+@import 'imports';
+$border-radius: 20px;
+
+.container {
+  @extend .column,
+  .full-height,
+  .full-width;
+
+  background-color: $elephant;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  padding: 15px 20px;
+}
+
+.content-title {
+  color: $white;
+  font-size: 20px;
+  margin-bottom: 15px;
+}

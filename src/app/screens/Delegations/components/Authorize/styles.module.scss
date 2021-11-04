@@ -1,0 +1,16 @@
+@import 'imports';
+
+.person-searcher-container {
+  padding: 0 0 20px 0;
+}
+
+.person-button {
+  background-color: $blue-green;
+  border-radius: 15px;
+  color: $white;
+  padding: 20px;
+}
+
+.person-button:hover {
+  background-color: $teal-blue;
+}

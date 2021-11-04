@@ -1,0 +1,16 @@
+@import 'imports';
+
+.container {
+  @extend .column,
+  .full-width;
+
+  background-color: $elephant;
+  border-radius: 20px;
+  padding: 15px 20px;
+}
+
+.person-title {
+  color: $white;
+  font-size: 20px;
+  margin-bottom: 15px;
+}

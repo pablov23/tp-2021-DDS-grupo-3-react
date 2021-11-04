@@ -1,0 +1,105 @@
+@import 'imports';
+$side-modal-width: 400px;
+$animation-scale: 1.3;
+
+.lateral-menu-right {
+  @extend %slide-in-right;
+  z-index: $modal-z-index;
+  background-color: $white;
+  width: $side-modal-width;
+  padding: 40px 20px;
+  border-radius: $default-border-radius 0 0 $default-border-radius;
+
+  @include md {
+    width: 60%;
+    padding: 10px 20px;
+    border-radius: 0;
+  }
+}
+
+.lateral-menu-left {
+  @extend .lateral-menu-right,
+  %slide-in-left;
+  border-radius: 0 $default-border-radius $default-border-radius 0;
+}
+
+.out-right {
+  @extend .lateral-menu-right,
+  %slide-out-right;
+}
+
+.out-left {
+  @extend .lateral-menu-left,
+  %slide-out-left;
+}
+
+.right {
+  @extend .column,
+  .end;
+}
+
+.left {
+  @extend .column,
+  .start;
+}
+
+.modal {
+  @extend .column,
+  .space-around,
+  .full-height;
+
+  overflow-y: auto;
+}
+
+%slide-in-right {
+  animation: slide-in-right $animation-duration $ease-in-out;
+}
+%slide-out-right {
+  animation: slide-out-right $animation-duration $ease-in-out;
+}
+%slide-in-left {
+  animation: slide-in-left $animation-duration $ease-in-out;
+}
+%slide-out-left {
+  animation: slide-out-left $animation-duration $ease-in-out;
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX($side-modal-width * $animation-scale);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out-right {
+  100% {
+    transform: translateX($side-modal-width * $animation-scale);
+  }
+
+  0% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX($side-modal-width * -$animation-scale);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out-left {
+  100% {
+    transform: translateX($side-modal-width * -$animation-scale);
+  }
+
+  0% {
+    transform: translateX(0);
+  }
+}

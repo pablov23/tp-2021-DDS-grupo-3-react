@@ -1,0 +1,31 @@
+@import 'variables/colors';
+
+.button {
+  background-color: $blue-green;
+  border-radius: 10px;
+  color: $white;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.button:hover {
+  background-color: $teal-blue;
+}
+
+.error {
+  font-size: 10px;
+}
+
+.input {
+  margin-bottom: 0;
+}
+
+.input-label {
+  color: $white;
+}
+
+.codeError {
+  color: $valencia;
+  font-size: 15px;
+  text-align: center;
+}

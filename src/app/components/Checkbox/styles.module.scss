@@ -1,0 +1,54 @@
+@import 'src/scss/variables/colors';
+
+@import 'src/scss/variables/variables';
+$checkbox-container: 18px; //by changing it, it also changes the checkmark size
+$checkmark-height: $checkbox-container * 0.5;
+$checkmark-width: $checkbox-container * 0.2;
+$checkbox-width-line: 2px;
+$border: 1px;
+$border-color: $azure-radiant;
+$border-radius: 0;
+
+.checkbox-label {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.checkbox-label input {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label .checkbox-custom {
+  border: $border solid $border-color;
+  height: $checkbox-container;
+  transition: all $transition-duration ease-out;
+  width: $checkbox-container;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom {
+  border: $border solid $border-color;
+  border-radius: $border-radius;
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.checkbox-label .checkbox-custom::after {
+  content: '';
+  position: fixed;
+  transition: all $transition-duration ease-out;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom::after {
+  border: solid;
+  border-width: 0 $checkbox-width-line $checkbox-width-line 0;
+  height: $checkmark-height;
+  left: $checkmark-width * 1.6;
+  opacity: 1;
+  top: $checkmark-height * 0.2;
+  transform: rotate(45deg) scale(1);
+  width: $checkmark-width;
+}

@@ -1,0 +1,45 @@
+@import 'imports';
+
+.container {
+  @extend .row,
+  .full-width,
+  .full-height;
+
+  @include md {
+    align-items: center;
+    flex-direction: column;
+  }
+  padding: 30px 0 0;
+}
+
+.searcher-container {
+  @extend .column,
+  .center;
+
+  @include md {
+    margin-right: 0;
+    width: 100%;
+  }
+  margin-right: 40px;
+  padding-bottom: 30px;
+  width: 40%;
+}
+
+.results-container {
+  @extend .column,
+  .full-width,
+  .full-height;
+
+  width: 100%;
+}
+
+.person-button {
+  background-color: $blue-green;
+  border-radius: 15px;
+  color: $white;
+  padding: 20px;
+}
+
+.person-button:hover {
+  background-color: $teal-blue;
+}
