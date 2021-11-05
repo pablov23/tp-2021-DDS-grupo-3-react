@@ -18,3 +18,5 @@ export const FORM_FIELDS = [
     type: 'password'
   }
 ];
+
+export const USER_TYPES = ['admin', 'owner', 'rescuer'];

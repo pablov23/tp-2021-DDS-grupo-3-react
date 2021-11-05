@@ -14,15 +14,15 @@ export const SELECT_STYLES = {
   control: props => ({
     ...props,
     background: '#FFF',
-    border: '2px solid #D9E2F4',
+    border: '2px solid #0BCC8B',
     borderRadius: '10px',
     boxSizing: 'border-box',
-    height: '46px',
+    height: '40px',
     ':hover': {
-      border: '2px solid #051B5F'
+      border: '2px solid #0BCC8B'
     },
     ':focus': {
-      border: '2px solid #051B5F'
+      border: '2px solid #0BCC8B'
     },
     width: '100%'
   }),
@@ -30,9 +30,9 @@ export const SELECT_STYLES = {
     ...provided,
     transition: 'all .2s ease',
     transform: state.selectProps.menuIsOpen ? 'rotate(180deg)' : null,
-    color: '#051B5F',
+    color: '#0BCC8B',
     ':hover': {
-      color: '#051B5F'
+      color: '#0BCC8B'
     }
   }),
   valueContainer: () => ({ height: '40px', padding: '0' }),
@@ -56,7 +56,7 @@ export const ERROR_STYLES = {
     border: '2px solid #DD2122',
     borderRadius: '10px',
     boxSizing: 'border-box',
-    height: '46px',
+    height: '40px',
     ':hover': {
       border: '2px solid #051B5F'
     },
@@ -76,38 +76,11 @@ export const ERROR_STYLES = {
   })
 };
 
-export const FOCUS_STYLES = {
-  control: props => ({
-    ...props,
-    background: '#FFF',
-    border: '2px solid #733FE7',
-    borderRadius: '10px',
-    boxSizing: 'border-box',
-    height: '46px',
-    ':hover': {
-      border: '2px solid #051B5F'
-    },
-    ':focus': {
-      border: '2px solid #051B5F'
-    },
-    width: '100%'
-  }),
-  dropdownIndicator: (provided, state) => ({
-    ...provided,
-    transition: 'all .2s ease',
-    transform: state.selectProps.menuIsOpen ? 'rotate(180deg)' : null,
-    color: '#733FE7',
-    ':hover': {
-      color: '#051B5F'
-    }
-  })
-};
-
 export const THEME = theme => ({
   ...theme,
   colors: {
     ...theme.colors,
-    primary: 'rgba(127, 70, 234, 0.35)',
-    primary75: 'rgba(127, 70, 234, 0.35)'
+    primary: '#0BCC8B',
+    primary75: '#0BCC8B'
   }
 });

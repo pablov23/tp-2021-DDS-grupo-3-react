@@ -5,7 +5,7 @@
   .center,
   .middle,
   .full-width,
-  .space-evenly;
+  .space-between;
 }
 
 .form-container {
@@ -18,10 +18,19 @@
   border-radius: 10px;
   color: $white;
   height: 40px;
-  margin-bottom: 5px;
+  margin-bottom: 35px;
 }
 
-.input-label {
+.register-icon {
+  height: 110px;
+  width: 110px;
+}
+
+.register-title {
+  font-size: 20px;
+}
+
+.register-label {
   color: $white;
 }
 
@@ -31,9 +40,4 @@
 
 .input {
   margin-bottom: 0;
-}
-
-.codeError {
-  color: $valencia;
-  font-size: 15px;
 }

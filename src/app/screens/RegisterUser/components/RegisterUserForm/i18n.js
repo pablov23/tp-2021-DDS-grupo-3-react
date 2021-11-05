@@ -4,7 +4,13 @@ i18next.addResources('es', 'RegisterUserForm', {
   name: 'Nombre de Usuario',
   password: 'Contraseña',
   passwordConfirmation: 'Repetir contraseña',
-  register: 'Siguiente'
+  register: 'Siguiente',
+  selectOne: 'Seleccione una opción',
+  userType: 'Tipo de usuario',
+  organization: 'Organización',
+  admin: 'Administrador',
+  owner: 'Dueño',
+  rescuer: 'Rescatista'
 });
 
 i18next.addResources('es', 'RegisterUserFormErrors', {

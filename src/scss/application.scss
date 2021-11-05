@@ -75,3 +75,26 @@ ol {
 .anchor {
   position: relative;
 }
+
+.section-title {
+  @extend .row,
+  .top,
+  .full-width,
+  .medium;
+
+  margin-bottom: 10px;
+  margin-left: 2px;
+}
+
+.select-label {
+  @extend .small-text,
+  .medium;
+
+  align-items: center;
+  background-color: $green-cyan;
+  color: $white;
+  display: flex;
+  flex-direction: row;
+  line-height: 21px;
+  padding: 8px 0 8px 12px;
+}
