@@ -1,60 +1,43 @@
+import { arrayOf, bool, func, string } from 'prop-types';
 import React from 'react';
-import { string, shape, func, arrayOf } from 'prop-types';
+import SelectLib from 'react-select';
 
-import Placeholder from './components/Placeholder';
+import { option } from '~propTypes/select';
 
-const Select = ({
-  name,
-  placeholder,
-  options,
-  handleChange,
-  defaultValue,
-  error,
-  className,
-  selectClassName,
-  errorClassName,
-  optionClassName,
-  ...selectProps
-}) => (
-  <div className={className}>
-    <select
-      onChange={handleChange}
-      name={name}
-      className={selectClassName}
-      defaultValue={defaultValue}
-      {...selectProps}>
-      <Placeholder label={placeholder} optionClassName={optionClassName} />
-      {options.map(({ label, value, ...optionProps }) => (
-        <option key={value} value={value} className={optionClassName} {...optionProps}>
-          {label}
-        </option>
-      ))}
-    </select>
-    {error && <span className={errorClassName}>{error}</span>}
-  </div>
-);
+import Error from '../Error';
+
+import { ERROR_STYLES, FOCUS_STYLES, SELECT_STYLES, THEME } from './styles';
+
+function Select({ name, options, onBlur, onChange, defaultValue, placeholder = '', error, value }) {
+  return (
+    <>
+      <SelectLib
+        name={name}
+        styles={{ ...SELECT_STYLES, ...(error && ERROR_STYLES), ...(value && FOCUS_STYLES) }}
+        theme={THEME}
+        options={options}
+        onChange={onChange}
+        onBlur={onBlur}
+        value={value}
+        defaultValue={defaultValue}
+        isSearchable={false}
+        isOptionDisabled={({ isDisabled }) => isDisabled}
+        placeholder={placeholder}
+      />
+      <Error error={error} touched errorClassName="m-top-1" />
+    </>
+  );
+}
 
 Select.propTypes = {
-  options: arrayOf(shape({ label: string, value: string })).isRequired,
-  className: string,
-  defaultValue: string,
-  error: string,
-  errorClassName: string,
-  handleChange: func,
+  options: arrayOf(option).isRequired,
+  defaultValue: option,
+  error: bool,
   name: string,
-  optionClassName: string,
   placeholder: string,
-  selectClassName: string
-};
-
-Select.defaultProps = {
-  className: '',
-  error: '',
-  errorClassName: '',
-  name: '',
-  optionClassName: '',
-  placeholder: '',
-  selectClassName: ''
+  value: string,
+  onBlur: func,
+  onChange: func
 };
 
 export default Select;
