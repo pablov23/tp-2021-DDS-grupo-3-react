@@ -13,7 +13,6 @@ const Links = ({ signUp }) => (
         <Link className={styles.signUp}>{i18next.t('Login:signUp')}</Link>
       </div>
     )}
-    <span className={styles.forgotPassword}>{i18next.t('Login:forgotPassword')}</span>
   </>
 );
 

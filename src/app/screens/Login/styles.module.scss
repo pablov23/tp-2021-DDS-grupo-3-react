@@ -3,7 +3,7 @@
 @import 'src/scss/variables/breakpoints';
 
 .container {
-  background-color: $elephant;
+  background-color: $te-papa-green;
 }
 
 .login-container {
@@ -38,13 +38,12 @@
 }
 
 .login-icon-title {
-  fill: $blue-green;
-  height: 200px;
+  fill: $caribbean-green;
+  height: 150px;
   @include xs {
     height: 100px;
-    margin-bottom: 15px;
     width: 100px;
   }
-  margin-top: 20px;
-  width: 200px;
+  margin: 20px 0;
+  width: 150px;
 }

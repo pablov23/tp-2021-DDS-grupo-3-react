@@ -1,7 +1,7 @@
 @import 'variables/colors';
 
 .button {
-  background-color: $blue-green;
+  background-color: $caribbean-green;
   border-radius: 10px;
   color: $white;
   height: 40px;
@@ -9,7 +9,7 @@
 }
 
 .button:hover {
-  background-color: $teal-blue;
+  background-color: $green-cyan;
 }
 
 .error {
@@ -24,7 +24,7 @@
   color: $white;
 }
 
-.codeError {
+.code-error {
   color: $valencia;
   font-size: 15px;
   text-align: center;

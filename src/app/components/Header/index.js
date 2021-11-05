@@ -1,11 +1,11 @@
 import { string } from 'prop-types';
 import React from 'react';
 
-import { ReactComponent as User } from '~assets/person.svg';
+import { ReactComponent as Foot } from '~assets/foot.svg';
 
 const Header = ({ title, titleClassName, iconClassName }) => (
   <>
-    <User className={iconClassName} alt="icon" />
+    <Foot className={iconClassName} alt="icon" />
     <span className={titleClassName}>{title}</span>
   </>
 );

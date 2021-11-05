@@ -4,7 +4,7 @@ i18next.addResources('es', 'Login', {
   user: 'Usuario',
   password: 'Contraseña',
   login: 'Iniciar sesión',
-  noUser: '¿No tenés usuario aún?',
+  noUser: '¿No tienes cuenta?',
   signUp: 'Registrate ahora',
   forgotPassword: '¿Olvidaste tu contraseña?',
   loginError: 'El usuario o la contraseña son inválidos.'
@@ -30,7 +30,7 @@ i18next.addResources('en', 'LoginAdmin', {
 });
 
 i18next.addResources('es', 'LoginUser', {
-  welcome: 'Bienvenido/a!'
+  welcome: 'Ingresar'
 });
 
 i18next.addResources('en', 'LoginUser', {
