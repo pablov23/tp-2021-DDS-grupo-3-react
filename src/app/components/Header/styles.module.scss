@@ -1,0 +1,29 @@
+@import 'imports';
+
+.header-container {
+  @extend .column,
+  .center,
+  .middle,
+  .full-width;
+}
+
+.header-title {
+  color: $white;
+  font-size: 24px;
+  @include xs {
+    margin-bottom: 15px;
+  }
+  line-height: 23px;
+  margin-bottom: 25px;
+}
+
+.header-icon {
+  fill: $caribbean-green;
+  height: 150px;
+  @include xs {
+    height: 100px;
+    width: 100px;
+  }
+  margin: 20px 0;
+  width: 150px;
+}

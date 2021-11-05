@@ -1,0 +1,19 @@
+@import 'imports';
+
+.container {
+  @extend .column,
+  .center,
+  .middle,
+  .full-height,
+  .full-width;
+
+  background-color: $te-papa-green;
+}
+
+.form-container {
+  max-width: 450px;
+}
+
+.register-title {
+  margin-bottom: 0;
+}

@@ -1,8 +1,16 @@
 import React from 'react';
 import { Formik } from 'formik';
-import { func, shape } from 'prop-types';
+import { func, shape, string } from 'prop-types';
+import cn from 'classnames';
 
-const FormWrapper = ({ initialValues, form: Children, onSubmit, validationSchema, ...props }) => (
+const FormWrapper = ({
+  initialValues,
+  form: Children,
+  onSubmit,
+  validationSchema,
+  formClassName,
+  ...props
+}) => (
   <Formik
     initialValues={initialValues}
     enableReinitialize
@@ -10,7 +18,7 @@ const FormWrapper = ({ initialValues, form: Children, onSubmit, validationSchema
     validateOnMount={false}
     validationSchema={validationSchema}>
     {({ handleChange, handleSubmit, values, errors, setFieldValue, submitCount }) => (
-      <form className="full-width" onSubmit={handleSubmit}>
+      <form className={cn('row full-width full-height', formClassName)} onSubmit={handleSubmit}>
         <Children
           values={values}
           onChange={handleChange}
@@ -26,6 +34,7 @@ const FormWrapper = ({ initialValues, form: Children, onSubmit, validationSchema
 
 FormWrapper.propTypes = {
   form: shape,
+  formClassName: string,
   initialValues: shape,
   validationSchema: shape,
   onSubmit: func

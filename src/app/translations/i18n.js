@@ -11,22 +11,9 @@ i18next.addResources('es', 'PersonHeader', {
   profile: 'Mi perfil'
 });
 
-i18next.addResources('es', 'RegisterPerson', {
-  subtitle: 'Registrar Persona',
-  results: 'Resultado de la búsqueda',
-  request: 'Solicitar'
-});
-
 i18next.addResources('es', 'PersonSearcher', {
   title: 'Buscar Persona',
   dni: 'Inserte DNI'
-});
-
-i18next.addResources('es', 'Delegations', {
-  subtitle: 'Delegaciones',
-  request: 'Solicitar',
-  authorize: 'Autorizar a persona',
-  visualize: 'Visualizar estado de delegaciones'
 });
 
 i18next.addResources('es', 'Validations', {

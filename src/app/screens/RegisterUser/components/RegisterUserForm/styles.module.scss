@@ -1,0 +1,39 @@
+@import 'imports';
+
+.container {
+  @extend .column,
+  .center,
+  .middle,
+  .full-width,
+  .space-around;
+}
+
+.form-container {
+  @extend .column,
+  .full-width;
+}
+
+.button {
+  background-color: $caribbean-green;
+  border-radius: 10px;
+  color: $white;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.input-label {
+  color: $white;
+}
+
+.error {
+  font-size: 10px;
+}
+
+.input {
+  margin-bottom: 0;
+}
+
+.codeError {
+  color: $valencia;
+  font-size: 15px;
+}

@@ -21,7 +21,7 @@ function Login({ title, signUp }) {
     <div className={`row full-width full-height center middle space-between ${styles.container}`}>
       <div className="column full-width full-height center middle">
         <div className={`column full-width center ${styles.loginContainer}`}>
-          <Header title={title} titleClassName={styles.loginWelcome} iconClassName={styles.loginIconTitle} />
+          <Header title={title} />
           <div className={`column full-width center ${styles.loginFormContainer}`}>
             <FormWrapper
               form={LoginForm}
