@@ -1,14 +1,5 @@
 @import 'imports';
 
-.container {
-  @extend .column,
-  .center,
-  .middle,
-  .full-width,
-  .full-height,
-  .space-between;
-}
-
 .form-container {
   @extend .column,
   .full-width;
@@ -20,15 +11,6 @@
   color: $white;
   height: 40px;
   margin-bottom: 35px;
-}
-
-.register-icon {
-  height: 110px;
-  width: 110px;
-}
-
-.register-title {
-  font-size: 20px;
 }
 
 .register-label {

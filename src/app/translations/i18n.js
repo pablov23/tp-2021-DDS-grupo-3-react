@@ -6,6 +6,10 @@ i18next.addResources('es', 'PersonCommon', {
   dni: 'DNI'
 });
 
+i18next.addResources('es', 'RescueViewWrapper', {
+  title: 'Rescate de Patitas'
+});
+
 i18next.addResources('es', 'PersonHeader', {
   title: 'Grupo 3',
   profile: 'Mi perfil'

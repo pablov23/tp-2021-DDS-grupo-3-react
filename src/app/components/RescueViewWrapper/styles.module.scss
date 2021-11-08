@@ -1,0 +1,19 @@
+@import 'imports';
+
+.container {
+  @extend .column,
+  .center,
+  .middle,
+  .full-width,
+  .full-height,
+  .space-between;
+}
+
+.rescue-icon {
+  height: 110px;
+  width: 110px;
+}
+
+.rescue-title {
+  font-size: 20px;
+}

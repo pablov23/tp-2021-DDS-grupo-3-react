@@ -3,8 +3,8 @@ import { func, shape } from 'prop-types';
 import React from 'react';
 
 import Button from '~app/components/Button';
-import Header from '~app/components/Header';
 import Input from '~app/components/Input';
+import RescueViewWrapper from '~app/components/RescueViewWrapper';
 import Select from '~app/components/Select';
 import { mapOptions } from '~utils/select';
 
@@ -14,12 +14,7 @@ import { FORM_FIELDS, MOCK_ORGANIZATIONS, USER_TYPES } from './constants';
 import styles from './styles.module.scss';
 
 const RegisterUserForm = ({ values, onChange, errors, ...props }) => (
-  <div className={styles.container}>
-    <Header
-      title={i18next.t('RegisterUser:title')}
-      iconClassName={styles.registerIcon}
-      titleClassName={styles.registerTitle}
-    />
+  <RescueViewWrapper>
     <div className={styles.formContainer}>
       {FORM_FIELDS.map(({ name, label, type }) => (
         <Input
@@ -56,7 +51,7 @@ const RegisterUserForm = ({ values, onChange, errors, ...props }) => (
     <Button type="submit" className={`full-width m-top-4 ${styles.button}`}>
       {i18next.t('RegisterUserForm:register')}
     </Button>
-  </div>
+  </RescueViewWrapper>
 );
 
 RegisterUserForm.propTypes = {
