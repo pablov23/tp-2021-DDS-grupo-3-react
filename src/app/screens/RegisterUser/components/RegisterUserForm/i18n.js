@@ -8,7 +8,6 @@ i18next.addResources('es', 'RegisterUserForm', {
   selectOne: 'Seleccione una opción',
   userType: 'Tipo de usuario',
   organization: 'Organización',
-  admin: 'Administrador',
   owner: 'Dueño',
   rescuer: 'Rescatista',
   org1: 'Organización 1',
