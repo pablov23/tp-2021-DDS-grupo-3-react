@@ -20,3 +20,5 @@ export const FORM_FIELDS = [
 ];
 
 export const USER_TYPES = ['admin', 'owner', 'rescuer'];
+
+export const MOCK_ORGANIZATIONS = ['org1', 'org2'];

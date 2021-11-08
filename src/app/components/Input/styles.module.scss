@@ -1,4 +1,11 @@
-@import 'variables/colors';
+@import 'imports';
+
+.container {
+  @extend .column,
+  .full-width;
+
+  height: 90px;
+}
 
 .input-label {
   font-size: 15px;
@@ -41,10 +48,4 @@
   font-size: 12px;
   line-height: 15px;
   padding-left: 10px;
-}
-
-.error {
-  color: $valencia;
-  font-size: 16px;
-  padding-left: 15px;
 }

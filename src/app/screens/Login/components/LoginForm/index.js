@@ -22,7 +22,6 @@ const LoginForm = ({ values, onChange, errors }) => (
         inputClassName={styles.input}
         labelClassName={styles.inputLabel}
         className="full-width m-bottom-3"
-        errorClassName={styles.error}
       />
     ))}
     <Button type="submit" className={`full-width m-top-3 ${styles.button}`}>

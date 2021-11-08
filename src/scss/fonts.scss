@@ -146,10 +146,9 @@
 }
 
 .error {
-  @extend .small-text;
-
   color: $valencia;
-  padding-top: 5px;
+  font-size: 12px;
+  padding-left: 15px;
 }
 
 .elipsis {

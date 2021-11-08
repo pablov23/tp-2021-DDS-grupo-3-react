@@ -8,7 +8,9 @@ import Input from '~app/components/Input';
 import Select from '~app/components/Select';
 import { mapOptions } from '~utils/select';
 
-import { FORM_FIELDS, USER_TYPES } from './constants';
+import { FIELDS } from '../../constants';
+
+import { FORM_FIELDS, MOCK_ORGANIZATIONS, USER_TYPES } from './constants';
 import styles from './styles.module.scss';
 
 const RegisterUserForm = ({ values, onChange, errors, ...props }) => (
@@ -30,20 +32,24 @@ const RegisterUserForm = ({ values, onChange, errors, ...props }) => (
           type={type}
           inputClassName={styles.input}
           labelClassName={styles.registerLabel}
-          className="full-width m-bottom-4"
-          errorClassName={styles.error}
         />
       ))}
       <Select
+        name={FIELDS.USER_TYPE}
         options={mapOptions(USER_TYPES, 'RegisterUserForm')}
         label={i18next.t('RegisterUserForm:userType')}
         labelClassName={styles.registerLabel}
+        value={values[FIELDS.USER_TYPE]}
+        error={errors[FIELDS.USER_TYPE]}
         {...props}
       />
       <Select
-        options={[]}
+        name={FIELDS.ORGANIZATION}
+        options={mapOptions(MOCK_ORGANIZATIONS, 'RegisterUserForm')}
         label={i18next.t('RegisterUserForm:organization')}
         labelClassName={styles.registerLabel}
+        value={values[FIELDS.ORGANIZATION]}
+        error={errors[FIELDS.ORGANIZATION]}
         {...props}
       />
     </div>

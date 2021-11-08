@@ -2,6 +2,8 @@ import React from 'react';
 import { bool, func, string } from 'prop-types';
 import cn from 'classnames';
 
+import Error from '../Error';
+
 import styles from './styles.module.scss';
 
 function Input({
@@ -18,7 +20,7 @@ function Input({
   ...inputProps
 }) {
   return (
-    <div className={className}>
+    <div className={cn(styles.container, className)}>
       {!hideLabel && (
         <label htmlFor={name} className={`${styles.inputLabel} ${labelClassName}`}>
           {label}
@@ -33,7 +35,7 @@ function Input({
         value={value}
         {...inputProps}
       />
-      {error && <span className={`${styles.error} ${errorClassName}`}>{error}</span>}
+      <Error error={error} className={errorClassName} />
     </div>
   );
 }

@@ -19,3 +19,5 @@ export const getSelectLabel = label =>
         }
       ]
     : [];
+
+export const getSelectedOption = (options, value) => options.find(option => option.value === value);

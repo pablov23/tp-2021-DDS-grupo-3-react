@@ -5,6 +5,7 @@
   .center,
   .middle,
   .full-width,
+  .full-height,
   .space-between;
 }
 
@@ -32,10 +33,6 @@
 
 .register-label {
   color: $white;
-}
-
-.error {
-  font-size: 10px;
 }
 
 .input {

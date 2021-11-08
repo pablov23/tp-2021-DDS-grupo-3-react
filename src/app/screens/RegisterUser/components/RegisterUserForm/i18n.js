@@ -10,7 +10,9 @@ i18next.addResources('es', 'RegisterUserForm', {
   organization: 'Organización',
   admin: 'Administrador',
   owner: 'Dueño',
-  rescuer: 'Rescatista'
+  rescuer: 'Rescatista',
+  org1: 'Organización 1',
+  org2: 'Organización 2'
 });
 
 i18next.addResources('es', 'RegisterUserFormErrors', {

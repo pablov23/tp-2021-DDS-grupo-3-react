@@ -8,8 +8,9 @@ import styles from './styles.module.scss';
 import { VALIDATION_SCHEMA } from './utils';
 
 const RegisterUser = () => {
-  const handleSubmit = values => {
-    console.log(values);
+  // eslint-disable-next-line no-empty-function
+  const handleSubmit = () => {
+    // TODO: Add handleSubmit action
   };
   return (
     <div className={styles.container}>

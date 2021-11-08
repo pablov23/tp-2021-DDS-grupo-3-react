@@ -1,15 +1,16 @@
 import React from 'react';
 import { string } from 'prop-types';
-import i18next from 'i18next';
-import { boolean } from 'yup/lib/locale';
+import cn from 'classnames';
 
-const Error = ({ message, className, show }) =>
-  show && <div className={className}>{message ? message : i18next.t('Error:default')}</div>;
+import styles from './styles.module.scss';
+
+const Error = ({ error, className }) => (
+  <div>{error && <div className={cn(styles.error, className)}>{error}</div>}</div>
+);
 
 Error.propTypes = {
   className: string,
-  message: string,
-  show: boolean
+  error: string
 };
 
 export default Error;
