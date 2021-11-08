@@ -1,0 +1,10 @@
+@import 'imports';
+
+.form-container {
+  @extend .column,
+  .full-width;
+}
+
+.button {
+  @extend .m-top-4;
+}
