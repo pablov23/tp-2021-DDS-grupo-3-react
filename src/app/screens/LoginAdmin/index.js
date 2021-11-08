@@ -1,18 +1,20 @@
 import React from 'react';
-import { string, bool } from 'prop-types';
+import { string } from 'prop-types';
+import { useHistory } from 'react-router';
 
 import FormWrapper from '~app/components/FormWrapper';
 import Header from '~app/components/Header';
+import { ROUTES } from '~constants/routes';
 
 import { INITIAL_VALUES } from './constants';
 import styles from './styles.module.scss';
 import LoginForm from './components/LoginForm';
-import Links from './components/Links';
 import { VALIDATION_SCHEMA } from './utils';
 
-function Login({ title, signUp }) {
+function LoginAdmin({ title }) {
+  const history = useHistory();
   const handleSubmit = () => {
-    // TODO: handle login
+    history.push(ROUTES.HOME_ADMIN.path);
   };
   return (
     <div className={`row full-width full-height center middle space-between ${styles.container}`}>
@@ -26,7 +28,6 @@ function Login({ title, signUp }) {
               onSubmit={handleSubmit}
               validationSchema={VALIDATION_SCHEMA}
             />
-            <Links signUp={signUp} />
           </div>
         </div>
       </div>
@@ -34,9 +35,8 @@ function Login({ title, signUp }) {
   );
 }
 
-Login.propTypes = {
-  signUp: bool,
+LoginAdmin.propTypes = {
   title: string
 };
 
-export default Login;
+export default LoginAdmin;

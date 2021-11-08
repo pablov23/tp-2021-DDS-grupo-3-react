@@ -10,5 +10,8 @@ export const LOGIN_PROPS = {
     subtitle: i18next.t('LoginUser:welcome'),
     submitAction: (values, setCode) => AuthActions.signIn({ user: values, setCode }),
     signUp: true
+  },
+  [ROLES.ADMIN]: {
+    title: i18next.t('LoginAdmin:welcome')
   }
 };

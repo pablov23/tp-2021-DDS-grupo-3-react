@@ -10,29 +10,6 @@ i18next.addResources('es', 'Login', {
   loginError: 'El usuario o la contraseña son inválidos.'
 });
 
-i18next.addResources('en', 'Login', {
-  welcome: 'Welcome!',
-  user: 'User',
-  password: 'Password',
-  login: 'Login',
-  forgotPassword: 'Forgot password',
-  noUser: 'No user yet?',
-  signUp: 'Sign up now!',
-  loginError: 'The user or the password are invalid'
-});
-
-i18next.addResources('es', 'LoginAdmin', {
-  welcome: 'Bienvenido/a Admin!'
-});
-
-i18next.addResources('en', 'LoginAdmin', {
-  welcome: 'Welcome Admin!'
-});
-
 i18next.addResources('es', 'LoginUser', {
-  welcome: 'Ingresar'
-});
-
-i18next.addResources('en', 'LoginUser', {
-  welcome: 'Welcome!'
+  welcome: 'Bienvenido/a!'
 });

@@ -1,0 +1,19 @@
+@import 'imports';
+
+.button {
+  @extend .m-top-3;
+}
+
+.input {
+  margin-bottom: 0;
+}
+
+.input-label {
+  color: $white;
+}
+
+.code-error {
+  color: $valencia;
+  font-size: 15px;
+  text-align: center;
+}
