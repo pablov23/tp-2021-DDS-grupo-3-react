@@ -25,7 +25,6 @@ const RegisterUserForm = ({ values, onChange, errors, ...props }) => (
           error={errors[name]}
           handleChange={onChange}
           type={type}
-          inputClassName={styles.input}
           labelClassName={styles.registerLabel}
         />
       ))}
@@ -48,7 +47,7 @@ const RegisterUserForm = ({ values, onChange, errors, ...props }) => (
         {...props}
       />
     </div>
-    <Button type="submit" className={`full-width m-top-4 ${styles.button}`}>
+    <Button type="submit" className={styles.button}>
       {i18next.t('RegisterUserForm:register')}
     </Button>
   </RescueViewWrapper>

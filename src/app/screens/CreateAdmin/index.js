@@ -2,12 +2,12 @@ import React from 'react';
 
 import FormWrapper from '~app/components/FormWrapper';
 
-import RegisterUserForm from './components/RegisterUserForm';
+import CreateAdminForm from './components/CreateAdminForm';
 import { INITIAL_VALUES } from './constants';
 import styles from './styles.module.scss';
 import { VALIDATION_SCHEMA } from './utils';
 
-const RegisterUser = () => {
+const CreateAdmin = () => {
   // eslint-disable-next-line no-empty-function
   const handleSubmit = () => {
     // TODO: Add handleSubmit action
@@ -16,7 +16,7 @@ const RegisterUser = () => {
     <div className={styles.container}>
       <FormWrapper
         initialValues={INITIAL_VALUES}
-        form={RegisterUserForm}
+        form={CreateAdminForm}
         onSubmit={handleSubmit}
         validationSchema={VALIDATION_SCHEMA}
       />
@@ -24,4 +24,4 @@ const RegisterUser = () => {
   );
 };
 
-export default RegisterUser;
+export default CreateAdmin;

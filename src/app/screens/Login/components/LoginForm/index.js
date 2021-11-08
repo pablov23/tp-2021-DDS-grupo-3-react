@@ -24,7 +24,7 @@ const LoginForm = ({ values, onChange, errors }) => (
         className="full-width m-bottom-3"
       />
     ))}
-    <Button type="submit" className={`full-width m-top-3 ${styles.button}`}>
+    <Button type="submit" className={styles.button}>
       {i18next.t('Login:login')}
     </Button>
   </div>

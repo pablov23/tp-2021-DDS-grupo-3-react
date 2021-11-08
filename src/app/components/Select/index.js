@@ -31,7 +31,7 @@ function Select({
   const selectedOption = useMemo(() => getSelectedOption(options, value), [options, value]);
   return (
     <div className={cn(styles.selectContainer, className)}>
-      {label && <span className={`${styles.selectLabel} ${labelClassName}`}>{label}</span>}
+      {label && <span className={`${styles.fieldLabel} ${labelClassName}`}>{label}</span>}
       <SelectLib
         name={name}
         styles={{ ...SELECT_STYLES, ...(error && ERROR_STYLES) }}

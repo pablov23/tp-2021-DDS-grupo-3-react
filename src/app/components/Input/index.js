@@ -22,7 +22,7 @@ function Input({
   return (
     <div className={cn(styles.container, className)}>
       {!hideLabel && (
-        <label htmlFor={name} className={`${styles.inputLabel} ${labelClassName}`}>
+        <label htmlFor={name} className={`${styles.fieldLabel} ${labelClassName}`}>
           {label}
         </label>
       )}

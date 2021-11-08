@@ -14,5 +14,12 @@ export const ROUTES = {
     publicRoute: true,
     supportedRoles: [ROLES.USER],
     exact: false
+  },
+  CREATE_ADMIN: {
+    path: '/create-admin',
+    basePath: '',
+    publicRoute: true,
+    supportedRoles: [ROLES.USER],
+    exact: false
   }
 };

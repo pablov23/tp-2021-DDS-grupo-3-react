@@ -7,6 +7,7 @@ import Login from '~screens/Login';
 import { LOGIN_PROPS } from '~constants/login';
 import { ROLES } from '~constants/users';
 import RegisterUser from '~app/screens/RegisterUser';
+import CreateAdmin from '~app/screens/CreateAdmin';
 
 import styles from './styles.module.scss';
 import AuthenticatedRoute from './components/AuthenticatedRoute';
@@ -15,6 +16,7 @@ const AppRoutesContainer = () => (
   <ConnectedRouter history={history}>
     <div className={`column center middle ${styles.container} ${styles.containerAlgo}`}>
       <Suspense>
+        <AuthenticatedRoute {...ROUTES.CREATE_ADMIN} component={CreateAdmin} />
         <AuthenticatedRoute {...ROUTES.REGISTER_USER} component={RegisterUser} />
         <AuthenticatedRoute
           {...ROUTES.LOGIN_USER}

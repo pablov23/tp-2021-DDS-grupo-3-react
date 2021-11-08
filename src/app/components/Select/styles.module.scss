@@ -1,11 +1,5 @@
 @import 'imports';
 
-.select-label {
-  font-size: 15px;
-  line-height: 24px;
-  padding-left: 15px;
-}
-
 .select-container {
   @extend .column,
   .full-width;

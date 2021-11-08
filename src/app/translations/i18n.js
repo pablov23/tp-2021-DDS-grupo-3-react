@@ -1,9 +1,9 @@
 import i18next from 'i18next';
 
-i18next.addResources('es', 'PersonCommon', {
-  name: 'Nombre',
-  surname: 'Apellido',
-  dni: 'DNI'
+i18next.addResources('es', 'RescueCommon', {
+  user: 'Usuario',
+  password: 'Contraseña',
+  save: 'Guardar'
 });
 
 i18next.addResources('es', 'RescueViewWrapper', {

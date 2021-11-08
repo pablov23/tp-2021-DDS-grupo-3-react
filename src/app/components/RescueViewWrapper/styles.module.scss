@@ -7,6 +7,19 @@
   .full-width,
   .full-height,
   .space-between;
+
+  background-color: $te-papa-green;
+}
+
+.content-container {
+  @extend .column,
+  .center,
+  .middle,
+  .full-height,
+  .full-width,
+  .space-around;
+
+  max-width: 450px;
 }
 
 .rescue-icon {

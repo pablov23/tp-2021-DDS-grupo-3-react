@@ -1,0 +1,16 @@
+@import 'imports';
+
+.button {
+  @extend .full-width;
+
+  background-color: $caribbean-green;
+  border-radius: 10px;
+  color: $white;
+  height: 40px;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: $green-cyan;
+}
