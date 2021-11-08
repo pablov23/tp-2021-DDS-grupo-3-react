@@ -1,5 +1,7 @@
 @import 'imports';
 $profile-size: 55px;
+$logo-size: 80px;
+$logo-size-xs: 60px;
 
 .container {
   @extend .column,
@@ -13,25 +15,35 @@ $profile-size: 55px;
   padding: 20px 40px;
 }
 
+.logo-container {
+  @extend .row,
+  .center,
+  .middle;
+}
+
+.logo {
+  fill: $white;
+  height: $logo-size;
+  @include xs {
+    height: $logo-size-xs;
+    width: $logo-size-xs;
+  }
+  margin: 20px 20px 20px 0;
+  width: $logo-size;
+}
+
 .upper-row {
   @extend .profile-row,
   .middle,
   .space-between;
 
-  background-color: $elephant;
+  background-color: $green-cyan;
 }
 
 .title {
   color: $white;
-  font-size: 36px;
-}
-
-.lower-row {
-  @extend .profile-row;
-
-  background-color: $outer-space-crayola;
-  color: $white;
-  font-size: 25px;
+  font-size: 30px;
+  line-height: 30px;
 }
 
 .profile-container {

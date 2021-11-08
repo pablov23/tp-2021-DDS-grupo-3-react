@@ -1,0 +1,15 @@
+@import 'imports';
+
+.buttons-container {
+  @extend .column,
+  .full-width,
+  .full-height,
+  .center,
+  .middle;
+
+  max-width: 450px;
+}
+
+.button {
+  height: 60px;
+}

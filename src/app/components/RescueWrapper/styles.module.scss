@@ -1,0 +1,21 @@
+@import 'imports';
+
+.container {
+  @extend .column,
+  .full-width,
+  .full-height,
+  .center,
+  .middle;
+
+  background-color: $te-papa-green;
+}
+
+.content-container {
+  @extend .row,
+  .full-width,
+  .full-height,
+  .center,
+  .middle;
+
+  padding: 20px 40px;
+}
