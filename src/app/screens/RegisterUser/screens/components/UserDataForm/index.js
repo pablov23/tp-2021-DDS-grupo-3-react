@@ -10,7 +10,7 @@ import RescueViewWrapper from '~app/components/RescueViewWrapper';
 import { NAME_FIELDS } from './constants';
 import styles from './styles.module.scss';
 
-const RegisterUserForm = ({ values, onChange, errors }) => (
+const UserDataForm = ({ values, onChange, errors }) => (
   <RescueViewWrapper>
     <div className={styles.formContainer}>
       <GenericInputList data={NAME_FIELDS} values={values} errors={errors} handleChange={onChange} />
@@ -23,10 +23,10 @@ const RegisterUserForm = ({ values, onChange, errors }) => (
   </RescueViewWrapper>
 );
 
-RegisterUserForm.propTypes = {
+UserDataForm.propTypes = {
   errors: shape,
   values: shape,
   onChange: func
 };
 
-export default RegisterUserForm;
+export default UserDataForm;
