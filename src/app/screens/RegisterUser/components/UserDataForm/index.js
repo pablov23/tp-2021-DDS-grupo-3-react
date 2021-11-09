@@ -3,19 +3,18 @@ import { func, shape } from 'prop-types';
 import React from 'react';
 
 import Button from '~app/components/Button';
-import DatePicker from '~app/components/DatePicker';
-import GenericInputList from '~app/components/GenericInputList';
+import GenericFieldList from '~app/components/GenericFieldList';
+import RescueStep from '~app/components/RescueStep';
 import RescueViewWrapper from '~app/components/RescueViewWrapper';
 
-import { NAME_FIELDS } from './constants';
+import { FORM_TARGET, USER_FIELDS } from './constants';
 import styles from './styles.module.scss';
 
-const UserDataForm = ({ values, onChange, errors }) => (
-  <RescueViewWrapper>
+const UserDataForm = props => (
+  <RescueViewWrapper className={styles.container}>
+    <RescueStep stepNumber="1" />
     <div className={styles.formContainer}>
-      <GenericInputList data={NAME_FIELDS} values={values} errors={errors} handleChange={onChange} />
-      <DatePicker />
-      {/* TODO: agregar selects y otra lista de inputs */}
+      <GenericFieldList data={USER_FIELDS} target={FORM_TARGET} {...props} />
     </div>
     <Button type="submit" className={styles.button}>
       {i18next.t('UserDataForm:next')}

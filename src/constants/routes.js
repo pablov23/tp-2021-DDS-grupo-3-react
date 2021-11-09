@@ -9,8 +9,15 @@ export const ROUTES = {
     exact: false
   },
   REGISTER_USER: {
-    path: '/register',
-    basePath: '',
+    path: '/register/user',
+    basePath: '/register',
+    publicRoute: true,
+    supportedRoles: [ROLES.USER],
+    exact: false
+  },
+  REGISTER_OWNER: {
+    path: '/register/owner',
+    basePath: '/register',
     publicRoute: true,
     supportedRoles: [ROLES.USER],
     exact: false

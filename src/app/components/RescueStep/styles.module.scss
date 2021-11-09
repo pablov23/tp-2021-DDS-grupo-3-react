@@ -1,0 +1,14 @@
+@import 'imports';
+
+.rescue-step {
+  @extend .row,
+  .center,
+  .middle;
+
+  border: 2px solid $caribbean-green;
+  border-radius: 100px;
+  color: $white;
+  font-size: 18px;
+  margin-bottom: 20px;
+  width: 100px;
+}

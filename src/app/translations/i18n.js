@@ -4,7 +4,8 @@ i18next.addResources('es', 'RescueCommon', {
   user: 'Usuario',
   password: 'Contraseña',
   save: 'Guardar',
-  title: 'Rescate de Patitas'
+  title: 'Rescate de Patitas',
+  selectOne: 'Seleccione una opción'
 });
 
 i18next.addResources('es', 'RescueHeader', {
