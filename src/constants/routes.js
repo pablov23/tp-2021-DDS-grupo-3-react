@@ -22,6 +22,13 @@ export const ROUTES = {
     supportedRoles: [ROLES.USER],
     exact: false
   },
+  REGISTER_RESCUER: {
+    path: '/register/rescuer',
+    basePath: '/register',
+    publicRoute: true,
+    supportedRoles: [ROLES.USER],
+    exact: false
+  },
   LOGIN_ADMIN: {
     path: '/admin/login',
     basePath: '/admin',
@@ -39,6 +46,13 @@ export const ROUTES = {
   CREATE_ADMIN: {
     path: '/admin/create',
     basePath: '/admin',
+    publicRoute: true,
+    supportedRoles: [ROLES.USER],
+    exact: false
+  },
+  ADD_CHARACTERISTIC: {
+    path: '/admin/characteristic/create',
+    basePath: '/admin/characteristic',
     publicRoute: true,
     supportedRoles: [ROLES.USER],
     exact: false
