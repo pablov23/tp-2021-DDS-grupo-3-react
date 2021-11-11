@@ -1,20 +1,22 @@
-import i18next from 'i18next';
+import Input from '~components/Input';
 
 import { FIELDS } from '../../constants';
 
+export const FORM_TARGET = 'RegisterUserForm';
+
 export const FORM_FIELDS = [
   {
-    name: FIELDS.NAME,
-    label: i18next.t('RegisterUserForm:name')
+    field: Input,
+    name: FIELDS.NAME
   },
   {
+    field: Input,
     name: FIELDS.PASSWORD,
-    label: i18next.t('RegisterUserForm:password'),
     type: 'password'
   },
   {
+    field: Input,
     name: FIELDS.PASSWORD_CONFIRMATION,
-    label: i18next.t('RegisterUserForm:passwordConfirmation'),
     type: 'password'
   }
 ];

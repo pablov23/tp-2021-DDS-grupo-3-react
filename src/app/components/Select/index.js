@@ -2,6 +2,7 @@ import { arrayOf, func, string } from 'prop-types';
 import React, { useMemo } from 'react';
 import SelectLib from 'react-select';
 import cn from 'classnames';
+import i18next from 'i18next';
 
 import { option } from '~propTypes/select';
 import { getSelectedOption, getSelectLabel } from '~utils/select';
@@ -19,7 +20,6 @@ function Select({
   error,
   errorClassName,
   value,
-  selectLabel,
   label,
   labelClassName,
   className,
@@ -36,7 +36,7 @@ function Select({
         name={name}
         styles={{ ...SELECT_STYLES, ...(error && ERROR_STYLES) }}
         theme={THEME}
-        options={[...getSelectLabel(selectLabel), ...options]}
+        options={[...getSelectLabel(i18next.t('RescueCommon:selectOne')), ...options]}
         onChange={handleChange}
         onBlur={onBlur}
         value={selectedOption}
@@ -59,7 +59,6 @@ Select.propTypes = {
   labelClassName: string,
   name: string,
   placeholder: string,
-  selectLabel: string,
   setFieldValue: func,
   value: string,
   onBlur: func

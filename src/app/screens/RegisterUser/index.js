@@ -1,16 +1,18 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 
 import FormWrapper from '~app/components/FormWrapper';
 
 import RegisterUserForm from './components/RegisterUserForm';
 import { INITIAL_VALUES } from './constants';
 import styles from './styles.module.scss';
-import { VALIDATION_SCHEMA } from './utils';
+import { getNextViewPath, VALIDATION_SCHEMA } from './utils';
 
 const RegisterUser = () => {
-  // eslint-disable-next-line no-empty-function
-  const handleSubmit = () => {
-    // TODO: Add handleSubmit action
+  const history = useHistory();
+  const handleSubmit = values => {
+    // TODO: save values
+    history.push(getNextViewPath(values));
   };
   return (
     <div className={styles.container}>

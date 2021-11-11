@@ -6,7 +6,7 @@ import UserDataForm from '../../components/UserDataForm';
 import { INITIAL_VALUES } from '../../components/UserDataForm/constants';
 import { VALIDATION_SCHEMA } from '../../components/UserDataForm/utils';
 
-function RegisterOwner() {
+function RegisterRescuer() {
   const handleSubmit = values => {
     // eslint-disable-next-line no-console
     console.log(values);
@@ -21,4 +21,4 @@ function RegisterOwner() {
   );
 }
 
-export default RegisterOwner;
+export default RegisterRescuer;

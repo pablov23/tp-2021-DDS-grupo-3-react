@@ -1,0 +1,14 @@
+@import 'imports';
+
+.container {
+  height: fit-content;
+}
+
+.form-container {
+  @extend .column,
+  .full-width;
+}
+
+.button {
+  @extend .m-top-4;
+}
