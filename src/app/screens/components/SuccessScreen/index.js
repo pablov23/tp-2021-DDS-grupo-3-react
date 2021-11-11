@@ -3,9 +3,9 @@ import { string } from 'prop-types';
 import React from 'react';
 import { useHistory } from 'react-router';
 
+import { ROUTES } from '~constants/routes';
 import Button from '~app/components/Button';
 import RescueWrapper from '~app/components/RescueWrapper';
-import { ROUTES } from '~constants/routes';
 
 import styles from './styles.module.scss';
 
