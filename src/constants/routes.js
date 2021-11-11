@@ -9,8 +9,8 @@ export const ROUTES = {
     exact: false
   },
   REGISTER_USER: {
-    path: '/register',
-    basePath: '',
+    path: '/register/user',
+    basePath: '/register',
     publicRoute: true,
     supportedRoles: [ROLES.USER],
     exact: false
@@ -35,5 +35,14 @@ export const ROUTES = {
     publicRoute: true,
     supportedRoles: [ROLES.USER],
     exact: false
+  },
+  SUCCESSFUL_REGISTER: {
+    path: '/register/success',
+    basePath: '/register',
+    publicRoute: true,
+    supportedRoles: [ROLES.USER],
+    exact: false
   }
 };
+
+// TODO: add successful routes

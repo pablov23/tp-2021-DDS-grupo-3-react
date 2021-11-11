@@ -4,3 +4,7 @@ i18next.addResources('es', 'RegisterUserErrors', {
   genericError: 'Ocurrió un error en la creación del usuario',
   emailUsed: 'Ese email ya fue utilizado por otro usuario'
 });
+
+i18next.addResources('es', 'RegisterUserSuccess', {
+  successfulRegister: '¡Registro Exitoso!'
+});

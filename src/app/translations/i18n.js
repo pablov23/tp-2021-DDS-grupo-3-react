@@ -38,3 +38,7 @@ i18next.addResources('es', 'Validations', {
 i18next.addResources('en', 'Validations', {
   invalidEmail: 'The entered email is invalid'
 });
+
+i18next.addResources('es', 'Home', {
+  title: 'Home'
+});
