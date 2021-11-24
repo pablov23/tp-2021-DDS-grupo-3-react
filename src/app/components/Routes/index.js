@@ -10,10 +10,11 @@ import RegisterUser from '~app/screens/RegisterUser';
 import CreateAdmin from '~app/screens/CreateAdmin';
 import HomeAdmin from '~app/screens/HomeAdmin';
 import LoginAdmin from '~app/screens/LoginAdmin';
-import RegisterSuccessful from '~app/screens/RegisterUser/screens/RegisterSuccessful';
+import RegisterSuccess from '~app/screens/RegisterUser/screens/RegisterSuccess';
 import RegisterOwner from '~app/screens/RegisterUser/screens/RegisterOwner';
 import RegisterRescuer from '~app/screens/RegisterUser/screens/RegisterRescuer';
 import AddCharacteristic from '~app/screens/AddCharacteristic';
+import PublicationSuccess from '~app/screens/PublicationSuccess';
 
 import styles from './styles.module.scss';
 import AuthenticatedRoute from './components/AuthenticatedRoute';
@@ -22,7 +23,8 @@ const AppRoutesContainer = () => (
   <ConnectedRouter history={history}>
     <div className={`column center middle ${styles.container}`}>
       <Suspense>
-        <AuthenticatedRoute {...ROUTES.SUCCESSFUL_REGISTER} component={RegisterSuccessful} />
+        <AuthenticatedRoute {...ROUTES.PUBLICATION_SUCCESS} component={PublicationSuccess} />
+        <AuthenticatedRoute {...ROUTES.REGISTER_SUCCESS} component={RegisterSuccess} />
         <AuthenticatedRoute {...ROUTES.ADD_CHARACTERISTIC} component={AddCharacteristic} />
         <AuthenticatedRoute {...ROUTES.REGISTER_RESCUER} component={RegisterRescuer} />
         <AuthenticatedRoute {...ROUTES.REGISTER_OWNER} component={RegisterOwner} />

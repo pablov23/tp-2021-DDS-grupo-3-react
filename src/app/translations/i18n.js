@@ -40,8 +40,12 @@ i18next.addResources('es', 'SuccessScreen', {
   homeButton: 'Volver al inicio'
 });
 
-i18next.addResources('es', 'RegisterSuccessful', {
+i18next.addResources('es', 'RegisterSuccess', {
   title: '¡Registro exitoso!'
+});
+
+i18next.addResources('es', 'PublicationSuccess', {
+  title: '¡Publicación generada\ncon exito!'
 });
 
 i18next.addResources('en', 'Validations', {

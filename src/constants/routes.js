@@ -1,6 +1,13 @@
 import { ROLES } from './users';
 
 export const ROUTES = {
+  HOME: {
+    path: '/',
+    basePath: '',
+    publicRoute: true,
+    supportedRoles: [ROLES.USER],
+    exact: false
+  },
   LOGIN_USER: {
     path: '/login',
     basePath: '',
@@ -57,9 +64,16 @@ export const ROUTES = {
     supportedRoles: [ROLES.USER],
     exact: false
   },
-  SUCCESSFUL_REGISTER: {
+  REGISTER_SUCCESS: {
     path: '/register/success',
     basePath: '/register',
+    publicRoute: true,
+    supportedRoles: [ROLES.USER],
+    exact: false
+  },
+  PUBLICATION_SUCCESS: {
+    path: '/publication/success',
+    basePath: '/publication',
     publicRoute: true,
     supportedRoles: [ROLES.USER],
     exact: false
