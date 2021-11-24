@@ -40,10 +40,14 @@ i18next.addResources('es', 'SuccessScreen', {
   homeButton: 'Volver al inicio'
 });
 
-i18next.addResources('es', 'RegisterSuccess', {
+i18next.addResources('es', 'RegisterSuccessful', {
   title: '¡Registro exitoso!'
 });
 
 i18next.addResources('en', 'Validations', {
   invalidEmail: 'The entered email is invalid'
+});
+
+i18next.addResources('es', 'Home', {
+  title: 'Home'
 });

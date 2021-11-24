@@ -57,7 +57,7 @@ export const ROUTES = {
     supportedRoles: [ROLES.USER],
     exact: false
   },
-  REGISTER_SUCCESS: {
+  SUCCESSFUL_REGISTER: {
     path: '/register/success',
     basePath: '/register',
     publicRoute: true,
