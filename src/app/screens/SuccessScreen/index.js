@@ -15,9 +15,7 @@ function SuccessScreen({ title }) {
   return (
     <RescueViewWrapper>
       <span className={styles.successTitle}>{title}</span>
-      <Button className={styles.button} onClick={handleRedirectToHome}>
-        {i18next.t('SuccessScreen:homeButton')}
-      </Button>
+      <Button onClick={handleRedirectToHome}>{i18next.t('SuccessScreen:homeButton')}</Button>
     </RescueViewWrapper>
   );
 }

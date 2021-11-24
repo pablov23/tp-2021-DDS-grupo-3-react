@@ -77,5 +77,12 @@ export const ROUTES = {
     publicRoute: true,
     supportedRoles: [ROLES.USER],
     exact: false
+  },
+  CONTACT_OWNER: {
+    path: '/contact',
+    basePath: '/',
+    publicRoute: true,
+    supportedRoles: [ROLES.USER],
+    exact: false
   }
 };

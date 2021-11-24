@@ -15,6 +15,7 @@ import RegisterOwner from '~app/screens/RegisterUser/screens/RegisterOwner';
 import RegisterRescuer from '~app/screens/RegisterUser/screens/RegisterRescuer';
 import AddCharacteristic from '~app/screens/AddCharacteristic';
 import PublicationSuccess from '~app/screens/PublicationSuccess';
+import ContactOwner from '~app/screens/ContactOwner';
 
 import styles from './styles.module.scss';
 import AuthenticatedRoute from './components/AuthenticatedRoute';
@@ -23,6 +24,7 @@ const AppRoutesContainer = () => (
   <ConnectedRouter history={history}>
     <div className={`column center middle ${styles.container}`}>
       <Suspense>
+        <AuthenticatedRoute {...ROUTES.CONTACT_OWNER} component={ContactOwner} />
         <AuthenticatedRoute {...ROUTES.PUBLICATION_SUCCESS} component={PublicationSuccess} />
         <AuthenticatedRoute {...ROUTES.REGISTER_SUCCESS} component={RegisterSuccess} />
         <AuthenticatedRoute {...ROUTES.ADD_CHARACTERISTIC} component={AddCharacteristic} />

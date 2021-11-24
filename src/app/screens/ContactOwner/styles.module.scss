@@ -1,0 +1,24 @@
+@import 'imports';
+
+.container {
+  @extend .column,
+  .center,
+  .middle;
+}
+
+.header-container {
+  height: 25%;
+}
+
+.content-container {
+  @extend .column,
+  .center,
+  .middle,
+  .full-width;
+
+  height: 75%;
+}
+
+.button {
+  height: 60px;
+}

@@ -48,6 +48,10 @@ i18next.addResources('es', 'PublicationSuccess', {
   title: '¡Publicación generada\ncon exito!'
 });
 
+i18next.addResources('es', 'ContactOwner', {
+  contact: 'Contactar al dueño'
+});
+
 i18next.addResources('en', 'Validations', {
   invalidEmail: 'The entered email is invalid'
 });

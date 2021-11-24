@@ -6,6 +6,8 @@ import UserDataForm from '../../components/UserDataForm';
 import { INITIAL_VALUES } from '../../components/UserDataForm/constants';
 import { VALIDATION_SCHEMA } from '../../components/UserDataForm/utils';
 
+import { STEP_NUMBER } from './constants';
+
 function RegisterOwner() {
   const handleSubmit = values => {
     // eslint-disable-next-line no-console
@@ -17,6 +19,7 @@ function RegisterOwner() {
       initialValues={INITIAL_VALUES}
       validationSchema={VALIDATION_SCHEMA}
       onSubmit={handleSubmit}
+      stepNumber={STEP_NUMBER}
     />
   );
 }

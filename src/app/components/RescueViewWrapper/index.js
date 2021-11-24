@@ -7,13 +7,14 @@ import Header from '~components/Header';
 
 import styles from './styles.module.scss';
 
-const RescueViewWrapper = ({ children, className, contentClassName }) => (
+const RescueViewWrapper = ({ children, className, contentClassName, headerClassName }) => (
   <div className={cn(styles.container, className)}>
     <div className={cn(styles.contentContainer, contentClassName)}>
       <Header
         title={i18next.t('RescueViewWrapper:title')}
         iconClassName={styles.rescueIcon}
         titleClassName={styles.rescueTitle}
+        className={headerClassName}
       />
       {children}
     </div>
@@ -22,7 +23,8 @@ const RescueViewWrapper = ({ children, className, contentClassName }) => (
 
 RescueViewWrapper.propTypes = {
   className: string,
-  contentClassName: string
+  contentClassName: string,
+  headerClassName: string
 };
 
 export default RescueViewWrapper;
