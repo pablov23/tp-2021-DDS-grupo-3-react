@@ -13,7 +13,7 @@ function HomeAdmin() {
   const handleCreateAdmin = () => history.push(ROUTES.CREATE_ADMIN.path);
   const handleAddCharacteristic = () => history.push(ROUTES.ADD_CHARACTERISTIC.path);
   return (
-    <RescueWrapper className={styles.container} contentClassName={styles.container}>
+    <RescueWrapper>
       <div className={styles.buttonsContainer}>
         <Button className={styles.button} onClick={handleCreateAdmin}>
           {i18next.t('HomeAdmin:createAdmin')}

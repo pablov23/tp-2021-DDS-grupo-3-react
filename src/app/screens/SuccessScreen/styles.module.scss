@@ -1,0 +1,9 @@
+@import 'imports';
+
+.success-title  {
+  @extend .medium;
+
+  color: $white;
+  font-size: 32px;
+  line-height: 22px;
+}

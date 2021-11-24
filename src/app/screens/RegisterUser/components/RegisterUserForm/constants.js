@@ -1,8 +1,14 @@
+import Select from '~components/Select';
 import Input from '~components/Input';
+import { mapOptions } from '~utils/select';
 
 import { FIELDS } from '../../constants';
 
 export const FORM_TARGET = 'RegisterUserForm';
+
+export const USER_TYPES = ['owner', 'rescuer'];
+
+export const MOCK_ORGANIZATIONS = ['org1', 'org2'];
 
 export const FORM_FIELDS = [
   {
@@ -18,9 +24,15 @@ export const FORM_FIELDS = [
     field: Input,
     name: FIELDS.PASSWORD_CONFIRMATION,
     type: 'password'
+  },
+  {
+    field: Select,
+    name: FIELDS.USER_TYPE,
+    options: mapOptions(USER_TYPES, FORM_TARGET)
+  },
+  {
+    field: Select,
+    name: FIELDS.ORGANIZATION,
+    options: mapOptions(MOCK_ORGANIZATIONS, FORM_TARGET)
   }
 ];
-
-export const USER_TYPES = ['owner', 'rescuer'];
-
-export const MOCK_ORGANIZATIONS = ['org1', 'org2'];

@@ -13,6 +13,7 @@ import LoginAdmin from '~app/screens/LoginAdmin';
 import RegisterOwner from '~app/screens/RegisterUser/screens/RegisterOwner';
 import RegisterRescuer from '~app/screens/RegisterUser/screens/RegisterRescuer';
 import AddCharacteristic from '~app/screens/AddCharacteristic';
+import RegisterSuccess from '~app/screens/RegisterSuccess';
 
 import styles from './styles.module.scss';
 import AuthenticatedRoute from './components/AuthenticatedRoute';
@@ -21,6 +22,7 @@ const AppRoutesContainer = () => (
   <ConnectedRouter history={history}>
     <div className={`column center middle ${styles.container}`}>
       <Suspense>
+        <AuthenticatedRoute {...ROUTES.REGISTER_SUCCESS} component={RegisterSuccess} />
         <AuthenticatedRoute {...ROUTES.ADD_CHARACTERISTIC} component={AddCharacteristic} />
         <AuthenticatedRoute {...ROUTES.REGISTER_RESCUER} component={RegisterRescuer} />
         <AuthenticatedRoute {...ROUTES.REGISTER_OWNER} component={RegisterOwner} />

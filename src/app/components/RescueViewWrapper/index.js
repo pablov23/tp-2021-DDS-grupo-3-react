@@ -8,7 +8,7 @@ import Header from '~components/Header';
 import styles from './styles.module.scss';
 
 const RescueViewWrapper = ({ children, className, contentClassName }) => (
-  <div className={cn(className, styles.container)}>
+  <div className={cn(styles.container, className)}>
     <div className={cn(styles.contentContainer, contentClassName)}>
       <Header
         title={i18next.t('RescueViewWrapper:title')}

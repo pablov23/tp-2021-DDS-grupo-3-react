@@ -5,12 +5,8 @@ import React from 'react';
 import Button from '~app/components/Button';
 import GenericFieldList from '~app/components/GenericFieldList';
 import RescueViewWrapper from '~app/components/RescueViewWrapper';
-import Select from '~app/components/Select';
-import { mapOptions } from '~utils/select';
 
-import { FIELDS } from '../../constants';
-
-import { FORM_FIELDS, FORM_TARGET, MOCK_ORGANIZATIONS, USER_TYPES } from './constants';
+import { FORM_FIELDS, FORM_TARGET } from './constants';
 import styles from './styles.module.scss';
 
 const RegisterUserForm = ({ values, onChange, errors, ...props }) => (
@@ -23,24 +19,6 @@ const RegisterUserForm = ({ values, onChange, errors, ...props }) => (
         handleChange={onChange}
         labelClassName={styles.registerLabel}
         target={FORM_TARGET}
-        {...props}
-      />
-      <Select
-        name={FIELDS.USER_TYPE}
-        options={mapOptions(USER_TYPES, FORM_TARGET)}
-        label={i18next.t('RegisterUserForm:userType')}
-        labelClassName={styles.registerLabel}
-        value={values[FIELDS.USER_TYPE]}
-        error={errors[FIELDS.USER_TYPE]}
-        {...props}
-      />
-      <Select
-        name={FIELDS.ORGANIZATION}
-        options={mapOptions(MOCK_ORGANIZATIONS, FORM_TARGET)}
-        label={i18next.t('RegisterUserForm:organization')}
-        labelClassName={styles.registerLabel}
-        value={values[FIELDS.ORGANIZATION]}
-        error={errors[FIELDS.ORGANIZATION]}
         {...props}
       />
     </div>

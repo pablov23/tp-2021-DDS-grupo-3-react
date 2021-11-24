@@ -36,6 +36,14 @@ i18next.addResources('es', 'Validations', {
   invalidEmail: 'El email ingresado es inválido'
 });
 
+i18next.addResources('es', 'SuccessScreen', {
+  homeButton: 'Volver al inicio'
+});
+
+i18next.addResources('es', 'RegisterSuccess', {
+  title: '¡Registro exitoso!'
+});
+
 i18next.addResources('en', 'Validations', {
   invalidEmail: 'The entered email is invalid'
 });

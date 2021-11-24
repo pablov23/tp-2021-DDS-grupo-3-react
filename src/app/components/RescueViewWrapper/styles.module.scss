@@ -5,8 +5,7 @@
   .center,
   .middle,
   .full-width,
-  .full-height,
-  .space-between;
+  .full-height;
 
   background-color: $te-papa-green;
 }
@@ -17,7 +16,7 @@
   .middle,
   .full-width,
   .full-height,
-  .space-around;
+  .space-between;
 
   max-width: 450px;
 }
