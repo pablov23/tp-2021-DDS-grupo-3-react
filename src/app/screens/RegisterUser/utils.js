@@ -1,13 +1,12 @@
 import * as Yup from 'yup';
 
 import { ROUTES } from '~constants/routes';
-import { PASSWORD_VALIDATION, REQUIRED_STRING_VALIDATION } from '~constants/validations';
+import { PASSWORD_SCHEMA_CONFIRMATION, REQUIRED_STRING_VALIDATION } from '~constants/validations';
 
 export const VALIDATION_SCHEMA = Yup.object().shape({
   name: REQUIRED_STRING_VALIDATION,
-  organization: REQUIRED_STRING_VALIDATION,
-  password: PASSWORD_VALIDATION,
-  passwordConfirmation: PASSWORD_VALIDATION,
+  password: PASSWORD_SCHEMA_CONFIRMATION,
+  passwordConfirmation: PASSWORD_SCHEMA_CONFIRMATION,
   userType: REQUIRED_STRING_VALIDATION
 });
 
