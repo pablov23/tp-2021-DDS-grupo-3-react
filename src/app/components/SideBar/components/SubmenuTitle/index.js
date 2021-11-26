@@ -3,7 +3,7 @@ import React from 'react';
 import cn from 'classnames';
 import { bool, shape, string } from 'prop-types';
 
-import ArrowDown from '~assets/arrow-down.svg';
+import { ReactComponent as ArrowDown } from '~assets/arrow-down.svg';
 
 import styles from '../styles.module.scss';
 
@@ -18,11 +18,7 @@ const SubmenuTitle = ({ item, labelClassName, isSelected, subMenuOpen, openSubMe
       {i18next.t(`Menu:${item.name}`)}
     </h2>
     {item.subMenus && (
-      <img
-        src={ArrowDown}
-        className={cn(styles.arrow, { [styles.rotate]: subMenuOpen })}
-        onClick={openSubMenu}
-      />
+      <ArrowDown className={cn(styles.arrow, { [styles.rotate]: subMenuOpen })} onClick={openSubMenu} />
     )}
   </div>
 );

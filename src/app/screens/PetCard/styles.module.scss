@@ -1,0 +1,72 @@
+@import "imports";
+
+$image-width: 40px;
+
+.container {
+    @extend .full-width, .column, .center, .middle;
+    height: 100vh;
+    background-color: $green-cyan;
+}
+
+.card {
+    @extend .column, .center, .space-around;
+    background-color: $white;
+    width: 600px;
+    height: 700px;
+    padding: 0px 15px 15px;
+    margin: 15px;
+    box-shadow: 8px 8px 3px $green-sheen;
+}
+
+.texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 250px;
+    width: 80%;
+    margin-top: 15px;
+    color: $blue-green;
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.name {
+    @extend .text;
+    color: $teal-blue;
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.pic {
+    width: 500px;
+}
+
+.title {
+    @extend .row, .full-width, .center;
+    margin: 40px;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: $white;
+    cursor: pointer;
+}
+
+.button {
+    background-color: $teal-blue;
+    height: 60px;
+    width: 290px;
+    margin-top: 20px;
+    color: $white;
+    border-radius: 10px;
+     &:hover {
+         background-color: rgba($teal-blue, 0.3);
+     }
+}

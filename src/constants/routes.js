@@ -6,7 +6,7 @@ export const ROUTES = {
     basePath: '',
     publicRoute: true,
     supportedRoles: [ROLES.USER],
-    exact: false
+    exact: true
   },
   LOGIN_USER: {
     path: '/login',
@@ -67,6 +67,13 @@ export const ROUTES = {
   REGISTER_SUCCESS: {
     path: '/register/success',
     basePath: '/register',
+    publicRoute: true,
+    supportedRoles: [ROLES.USER],
+    exact: false
+  },
+  PET_CARD: {
+    path: '/pets/:id',
+    basePath: '/pets',
     publicRoute: true,
     supportedRoles: [ROLES.USER],
     exact: false

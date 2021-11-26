@@ -7,91 +7,84 @@ $sub-item-size: 15px;
   @extend .row,
   .middle,
   .full-width,
-  .p-left-4,
   .m-top-3,
   .m-bottom-3;
 
   height: 25px;
-  text-align: left;
+  color: $white;
 }
 
 .sub-menu {
   @extend .row,
   .middle,
   .full-width,
-  .space-between;
+  .space-between
 }
 
 .sub-menu-title {
-  @extend .text;
-  @extend .m-left-1;
+  color: $white;
+  font-size: 22px;
 }
 
-.sub-menu-title-clicked {
+.sub-menu-title:hover {
+  color: $green-cyan;
+}
+
+.sub-menu-title-selected {
   @extend .semi-bold;
 }
 
 .container {
   @extend .column,
   .full-width;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
 }
 
 .menu-item-selected {
-  @extend %menu-item;
-
-  color: $azure-radiant;
+  @extend %menu-item, .semi-bold;
+  color: $green-cyan;
 }
 
 .border {
   @extend .self-center;
-
-  background-color: $azure-radiant;
-  border-radius: 3px 0 0 3px;
-  height: 45px;
   width: 5px;
+  height: 35px;
+  border-radius: 3px 0 0 3px;
+  background-color: $green-cyan;
 }
 
 .menu-item-not-selected {
   @extend %menu-item;
-
-  color: $white;
-
-  &.menu-item-hovered {
-    color: $azure-radiant;
-
-    &.secondary {
-      color: $torch-red;
-    }
-  }
 }
 
+.menu-item-not-selected:hover > div > h2 {
+  color: $green-cyan;
+}
+
+.menu-item-not-selected:hover > div > svg path {
+  fill: $green-cyan;
+}
+
+
 .menu-icon {
-  height: $menu-icon-size;
   width: $menu-icon-size;
+  height: $menu-text-height;
 
   &.menu-icon-img-selected path {
-    fill: $azure-radiant;
-  }
-
-  &.secondary path {
-    fill: $torch-red;
+    fill: $green-cyan;
   }
 }
 
 .menu-icon-selected {
-  background-color: $light-green;
   border-radius: 30px;
-}
-
-.selected-text {
-  color: $brand-primary;
+  background-color: $green-cyan;
 }
 
 .sub-menu-container {
   @extend .full-width;
-
-  color: $brand-primary;
-  padding-left: 20px;
+  color: $green-cyan;
 }
 
 .sub-item {
@@ -99,6 +92,14 @@ $sub-item-size: 15px;
 }
 
 .sub-item-icon {
-  height: $sub-item-size;
   width: $sub-item-size;
+  height: $menu-text-height;
+}
+
+.icon-container {
+  width: 35px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

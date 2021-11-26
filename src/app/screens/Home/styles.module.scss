@@ -1,0 +1,30 @@
+@import 'imports';
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: $green-cyan;
+}
+
+.grid {
+    padding: 30px;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content {
+    @extend .column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.title {
+    @extend .row, .full-width, .center;
+    margin: 40px;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: $white;
+}

@@ -5,43 +5,20 @@ import { string, func, shape, bool } from 'prop-types';
 import useMenuItem from '../useMenuItem';
 import SubmenuTitle from '../SubmenuTitle';
 import styles from '../styles.module.scss';
-import IconItem from '../IconItem';
 
-function MenuItem({ item, onClick, itemClassName = '', iconClassName = '', labelClassName = '' }) {
-  const {
-    setHover,
-    ImgComponent,
-    ItemComponent,
-    isSelectedOrHovering,
-    openSubMenu,
-    isSelected,
-    subMenuOpen,
-    isHovering,
-    handleClick
-  } = useMenuItem({ item, onClick });
+function MenuItem({ item, onClick, itemClassName = '', labelClassName = '' }) {
+  const { openSubMenu, isSelected, subMenuOpen, ItemComponent, handleClick } = useMenuItem({
+    item,
+    onClick
+  });
 
   return (
     <ItemComponent to={item.route?.path} className={styles.container} onClick={item?.onClick || handleClick}>
       <div
-        onMouseEnter={setHover(true)}
-        onMouseLeave={setHover(false)}
         className={cn(
-          {
-            [styles.menuItemSelected]: isSelected,
-            [styles.menuItemNotSelected]: !isSelected,
-            [styles.menuItemHovered]: isHovering,
-            [styles.secondary]: isHovering && !!item?.secondary
-          },
+          { [styles.menuItemSelected]: isSelected, [styles.menuItemNotSelected]: !isSelected },
           itemClassName
         )}>
-        <IconItem
-          imgComponent={ImgComponent}
-          isSelected={isSelected}
-          isHovering={isHovering}
-          isSelectedOrHovering={isSelectedOrHovering}
-          item={item}
-          iconClassName={iconClassName}
-        />
         <SubmenuTitle
           item={item}
           labelClassName={labelClassName}
@@ -59,7 +36,6 @@ function MenuItem({ item, onClick, itemClassName = '', iconClassName = '', label
               item={sub}
               itemClassName={styles.subItem}
               iconClassName={styles.subItemIcon}
-              labelClassName="smaller-text"
             />
           ))}
         </div>
@@ -74,7 +50,6 @@ MenuItem.propTypes = {
     iconOff: string.isRequired,
     secondary: bool
   }).isRequired,
-  iconClassName: string,
   itemClassName: string,
   labelClassName: string,
   onClick: func

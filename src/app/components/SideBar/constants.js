@@ -1,31 +1,16 @@
-import { ReactComponent as supervisionsIcon } from '~assets/supervisions.svg';
+import { ROUTES } from '~constants/routes';
 
 export const MENU_ITEMS = [
   {
-    name: 'Link 1',
-    icon: supervisionsIcon
+    name: 'Encontré una mascota perdida',
+    route: ROUTES.LOGIN_USER
   },
   {
-    name: 'Link 2',
-    icon: supervisionsIcon
+    name: 'Perdí mi mascota',
+    route: ROUTES.LOGIN_USER
   },
   {
-    name: 'Link 3',
-    icon: supervisionsIcon
-  },
-  {
-    name: 'Link 4',
-    icon: supervisionsIcon
-  },
-  {
-    name: 'Link 5',
-    icon: supervisionsIcon,
-    subMenus: [
-      { name: 'Submenu 1', icon: supervisionsIcon },
-      { name: 'Submenu 2', icon: supervisionsIcon },
-      { name: 'Submenu 3', icon: supervisionsIcon }
-    ]
+    name: 'Quiero dar en adopción',
+    route: ROUTES.LOGIN_ADMIN
   }
 ];
-
-export const MODAL_CLOSE_TIMEOUT = 300;

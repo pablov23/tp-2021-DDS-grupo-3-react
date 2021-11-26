@@ -57,5 +57,9 @@ i18next.addResources('en', 'Validations', {
 });
 
 i18next.addResources('es', 'Home', {
-  title: 'Home'
+  title: 'Rescate de patitas'
+});
+
+i18next.addResources('es', 'PetCard', {
+  wantToAdopt: 'Quiero adoptarlo'
 });
