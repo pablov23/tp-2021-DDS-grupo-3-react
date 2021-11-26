@@ -41,7 +41,8 @@ i18next.addResources('es', 'SuccessScreen', {
 });
 
 i18next.addResources('es', 'RegisterSuccess', {
-  title: '¡Registro exitoso!'
+  title: '¡Registro exitoso!',
+  toLogin: 'Ir a iniciar sesión'
 });
 
 i18next.addResources('es', 'PublicationSuccess', {

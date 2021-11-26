@@ -26,18 +26,6 @@ const AppRoutesContainer = () => (
   <ConnectedRouter history={history}>
     <div className={styles.container}>
       <Suspense>
-        <AuthenticatedRoute {...ROUTES.REGISTER_SUCCESS} component={RegisterSuccess} />
-        <AuthenticatedRoute {...ROUTES.CONTACT_OWNER} component={ContactOwner} />
-        <AuthenticatedRoute {...ROUTES.PUBLICATION_SUCCESS} component={PublicationSuccess} />
-        <AuthenticatedRoute {...ROUTES.REGISTER_SUCCESS} component={RegisterSuccess} />
-        <AuthenticatedRoute {...ROUTES.ADD_CHARACTERISTIC} component={AddCharacteristic} />
-        <AuthenticatedRoute {...ROUTES.REGISTER_RESCUER} component={RegisterRescuer} />
-        <AuthenticatedRoute {...ROUTES.REGISTER_OWNER} component={RegisterOwner} />
-        <AuthenticatedRoute {...ROUTES.CREATE_ADMIN} component={CreateAdmin} />
-        <AuthenticatedRoute {...ROUTES.HOME_ADMIN} component={HomeAdmin} />
-        <AuthenticatedRoute {...ROUTES.REGISTER_USER} component={RegisterUser} />
-        <AuthenticatedRoute {...ROUTES.HOME} component={Home} />
-        <AuthenticatedRoute {...ROUTES.PET_CARD} component={PetCard} />
         <AuthenticatedRoute
           {...ROUTES.LOGIN_ADMIN}
           component={LoginAdmin}
@@ -48,6 +36,17 @@ const AppRoutesContainer = () => (
           component={Login}
           componentProps={LOGIN_PROPS[ROLES.USER]}
         />
+        <AuthenticatedRoute {...ROUTES.REGISTER_SUCCESS} component={RegisterSuccess} />
+        <AuthenticatedRoute {...ROUTES.CONTACT_OWNER} component={ContactOwner} />
+        <AuthenticatedRoute {...ROUTES.PUBLICATION_SUCCESS} component={PublicationSuccess} />
+        <AuthenticatedRoute {...ROUTES.ADD_CHARACTERISTIC} component={AddCharacteristic} />
+        <AuthenticatedRoute {...ROUTES.REGISTER_RESCUER} component={RegisterRescuer} />
+        <AuthenticatedRoute {...ROUTES.REGISTER_OWNER} component={RegisterOwner} />
+        <AuthenticatedRoute {...ROUTES.CREATE_ADMIN} component={CreateAdmin} />
+        <AuthenticatedRoute {...ROUTES.HOME_ADMIN} component={HomeAdmin} />
+        <AuthenticatedRoute {...ROUTES.REGISTER_USER} component={RegisterUser} />
+        <AuthenticatedRoute {...ROUTES.PET_CARD} component={PetCard} />
+        <AuthenticatedRoute {...ROUTES.HOME} component={Home} />
       </Suspense>
     </div>
   </ConnectedRouter>

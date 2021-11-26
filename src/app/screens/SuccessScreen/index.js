@@ -1,5 +1,5 @@
 import i18next from 'i18next';
-import { string } from 'prop-types';
+import { string, func } from 'prop-types';
 import React from 'react';
 import { useHistory } from 'react-router';
 
@@ -9,18 +9,20 @@ import { ROUTES } from '~constants/routes';
 
 import styles from './styles.module.scss';
 
-function SuccessScreen({ title }) {
+function SuccessScreen({ title, buttonText = i18next.t('SuccessScreen:homeButton'), customHandleClick }) {
   const history = useHistory();
   const handleRedirectToHome = () => history.push(ROUTES.HOME.basePath);
   return (
     <RescueViewWrapper>
       <span className={styles.successTitle}>{title}</span>
-      <Button onClick={handleRedirectToHome}>{i18next.t('SuccessScreen:homeButton')}</Button>
+      <Button onClick={customHandleClick || handleRedirectToHome}>{buttonText}</Button>
     </RescueViewWrapper>
   );
 }
 
 SuccessScreen.propTypes = {
+  buttonText: string,
+  customHandleClick: func,
   title: string
 };
 
