@@ -20,7 +20,7 @@ function LoginAdmin({ title }) {
     <div className={`row full-width full-height center middle space-between ${styles.container}`}>
       <div className="column full-width full-height center middle">
         <div className={`column full-width center ${styles.loginContainer}`}>
-          <Header title={title} />
+          <Header title={title} redirectToHome />
           <div className={`column full-width center ${styles.loginFormContainer}`}>
             <FormWrapper
               form={LoginForm}
