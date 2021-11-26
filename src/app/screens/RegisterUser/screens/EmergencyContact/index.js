@@ -6,10 +6,11 @@ import FormWrapper from '~app/components/FormWrapper';
 import { ROUTES } from '~constants/routes';
 
 import UserDataForm from '../../components/UserDataForm';
-import { INITIAL_VALUES, USER_FIELDS } from '../../components/UserDataForm/constants';
-import { VALIDATION_SCHEMA } from '../../components/UserDataForm/utils';
+import { EMERGENCY_CONTACT_FIELDS, INITIAL_VALUES } from '../../components/UserDataForm/constants';
 
-function RegisterRescuer() {
+import { STEP_NUMBER } from './constants';
+
+function EmergencyContact() {
   const history = useHistory();
   const handleSubmit = values => {
     // TODO: integration
@@ -17,16 +18,18 @@ function RegisterRescuer() {
     console.log(values);
     history.push(ROUTES.REGISTER_SUCCESS.path);
   };
+
+  // TODO: Change initial values and validation schema
   return (
     <FormWrapper
       form={UserDataForm}
-      fields={USER_FIELDS}
-      buttonText={i18next.t('UserDataForm:next')}
+      fields={EMERGENCY_CONTACT_FIELDS}
+      buttonText={i18next.t('UserDataForm:finish')}
       initialValues={INITIAL_VALUES}
-      validationSchema={VALIDATION_SCHEMA}
       onSubmit={handleSubmit}
+      stepNumber={STEP_NUMBER}
     />
   );
 }
 
-export default RegisterRescuer;
+export default EmergencyContact;

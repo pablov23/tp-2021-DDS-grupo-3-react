@@ -18,6 +18,7 @@ import Home from '~app/screens/Home';
 import PetCard from '~app/screens/PetCard';
 import PublicationSuccess from '~app/screens/PublicationSuccess';
 import ContactOwner from '~app/screens/ContactOwner';
+import EmergencyContact from '~app/screens/RegisterUser/screens/EmergencyContact';
 
 import styles from './styles.module.scss';
 import AuthenticatedRoute from './components/AuthenticatedRoute';
@@ -26,6 +27,7 @@ const AppRoutesContainer = () => (
   <ConnectedRouter history={history}>
     <div className={styles.container}>
       <Suspense>
+        <AuthenticatedRoute {...ROUTES.EMERGENCY_CONTACT} component={EmergencyContact} />
         <AuthenticatedRoute
           {...ROUTES.LOGIN_ADMIN}
           component={LoginAdmin}

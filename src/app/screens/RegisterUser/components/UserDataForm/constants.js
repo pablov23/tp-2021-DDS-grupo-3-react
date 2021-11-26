@@ -12,12 +12,15 @@ export const USER_FIELDS_NAMES = {
   ID_NUMBER: 'idNumber',
   EMAIL: 'email',
   PHONE: 'phone',
-  NOTIFICATION_METHOD: 'notificationMethod'
+  NOTIFICATION_METHOD: 'notificationMethod',
+  FAVOURITE_CONTACT: 'favouriteContact'
 };
 
 export const ID_TYPES = ['nationalId', 'passport'];
 
 export const NOTIFICATION_METHODS = ['whatsapp', 'email', 'textMessage'];
+
+export const YES_NO = ['yes', 'no'];
 
 export const USER_FIELDS = [
   {
@@ -55,6 +58,22 @@ export const USER_FIELDS = [
     field: Input,
     name: USER_FIELDS_NAMES.PHONE,
     type: 'phone'
+  }
+];
+
+const NOT_INCLUDED_EMERGENCY = [
+  USER_FIELDS_NAMES.EMAIL,
+  USER_FIELDS_NAMES.ID_TYPE,
+  USER_FIELDS_NAMES.ID_NUMBER,
+  USER_FIELDS_NAMES.DATE_OF_BIRTH
+];
+
+export const EMERGENCY_CONTACT_FIELDS = [
+  ...USER_FIELDS.filter(({ name }) => !NOT_INCLUDED_EMERGENCY.includes(name)),
+  {
+    field: Select,
+    name: USER_FIELDS_NAMES.FAVOURITE_CONTACT,
+    options: mapOptions(YES_NO, FORM_TARGET)
   }
 ];
 

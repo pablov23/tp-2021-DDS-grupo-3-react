@@ -15,7 +15,11 @@ i18next.addResources('es', 'UserDataForm', {
   notificationMethod: 'Forma de notificación',
   whatsapp: 'Whatsapp',
   textMessage: 'SMS',
-  next: 'Siguiente'
+  next: 'Siguiente',
+  yes: 'Sí',
+  no: 'No',
+  finish: 'Finalizar registro',
+  favouriteContact: 'Es contacto preferido'
 });
 
 i18next.addResources('es', 'UserDataFormErrors', {

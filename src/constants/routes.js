@@ -91,5 +91,12 @@ export const ROUTES = {
     publicRoute: true,
     supportedRoles: [ROLES.USER],
     exact: false
+  },
+  EMERGENCY_CONTACT: {
+    path: '/register/emergency-contact',
+    basePath: '/',
+    publicRoute: true,
+    supportedRoles: [ROLES.USER],
+    exact: false
   }
 };
