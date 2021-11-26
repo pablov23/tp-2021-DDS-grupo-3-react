@@ -1,72 +1,84 @@
-@import "imports";
-
+@import 'imports';
 $image-width: 40px;
 
 .container {
-    @extend .full-width, .column, .center, .middle;
-    height: 100vh;
-    background-color: $green-cyan;
+  @extend .full-width,
+  .column,
+  .center,
+  .middle;
+
+  background-color: $green-cyan;
+  height: 100vh;
 }
 
 .card {
-    @extend .column, .center, .space-around;
-    background-color: $white;
-    width: 600px;
-    height: 700px;
-    padding: 0px 15px 15px;
-    margin: 15px;
-    box-shadow: 8px 8px 3px $green-sheen;
+  @extend .column,
+  .center,
+  .space-around;
+
+  background-color: $white;
+  box-shadow: 8px 8px 3px $green-sheen;
+  height: 700px;
+  margin: 15px;
+  padding: 0 15px 15px;
+  width: 600px;
 }
 
 .texts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: 250px;
-    width: 80%;
-    margin-top: 15px;
-    color: $blue-green;
+  align-items: center;
+  color: $blue-green;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  justify-content: space-around;
+  margin-top: 15px;
+  width: 80%;
 }
 
 .text {
-    display: flex;
-    flex-direction: row;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 30px;
+  display: flex;
+  flex-direction: row;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
 }
 
 .name {
-    @extend .text;
-    color: $teal-blue;
-    font-weight: 600;
-    font-size: 32px;
-    margin-bottom: 5px;
+  @extend .text;
+
+  color: $teal-blue;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
 .pic {
-    width: 500px;
+  width: 500px;
 }
 
 .title {
-    @extend .row, .full-width, .center;
-    margin: 40px;
-    font-size: 28px;
-    text-transform: uppercase;
-    color: $white;
-    cursor: pointer;
+  @extend .row,
+  .full-width,
+  .center,
+  .middle;
+
+  color: $white;
+  cursor: pointer;
+  font-size: 28px;
+  margin: 40px;
+  text-transform: uppercase;
 }
 
 .button {
-    background-color: $teal-blue;
-    height: 60px;
-    width: 290px;
-    margin-top: 20px;
-    color: $white;
-    border-radius: 10px;
-     &:hover {
-         background-color: rgba($teal-blue, 0.3);
-     }
+  background-color: $teal-blue;
+  border-radius: 10px;
+  color: $white;
+  height: 60px;
+  margin-top: 20px;
+  width: 290px;
+
+  &:hover {
+    background-color: rgba($teal-blue, 0.3);
+  }
 }

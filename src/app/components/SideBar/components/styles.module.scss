@@ -10,15 +10,15 @@ $sub-item-size: 15px;
   .m-top-3,
   .m-bottom-3;
 
-  height: 25px;
   color: $white;
+  height: 25px;
 }
 
 .sub-menu {
   @extend .row,
   .middle,
   .full-width,
-  .space-between
+  .space-between;
 }
 
 .sub-menu-title {
@@ -37,22 +37,26 @@ $sub-item-size: 15px;
 .container {
   @extend .column,
   .full-width;
-  min-height: 300px;
+
   display: flex;
   justify-content: center;
+  min-height: 260px;
 }
 
 .menu-item-selected {
-  @extend %menu-item, .semi-bold;
+  @extend %menu-item,
+  .semi-bold;
+
   color: $green-cyan;
 }
 
 .border {
   @extend .self-center;
-  width: 5px;
-  height: 35px;
-  border-radius: 3px 0 0 3px;
+
   background-color: $green-cyan;
+  border-radius: 3px 0 0 3px;
+  height: 35px;
+  width: 5px;
 }
 
 .menu-item-not-selected {
@@ -67,10 +71,9 @@ $sub-item-size: 15px;
   fill: $green-cyan;
 }
 
-
 .menu-icon {
-  width: $menu-icon-size;
   height: $menu-text-height;
+  width: $menu-icon-size;
 
   &.menu-icon-img-selected path {
     fill: $green-cyan;
@@ -78,12 +81,13 @@ $sub-item-size: 15px;
 }
 
 .menu-icon-selected {
-  border-radius: 30px;
   background-color: $green-cyan;
+  border-radius: 30px;
 }
 
 .sub-menu-container {
   @extend .full-width;
+
   color: $green-cyan;
 }
 
@@ -92,14 +96,14 @@ $sub-item-size: 15px;
 }
 
 .sub-item-icon {
-  width: $sub-item-size;
   height: $menu-text-height;
+  width: $sub-item-size;
 }
 
 .icon-container {
-  width: 35px;
-  height: 28px;
-  display: flex;
   align-items: center;
+  display: flex;
+  height: 28px;
   justify-content: center;
+  width: 35px;
 }
