@@ -14,3 +14,11 @@
 .button:hover {
   background-color: $green-cyan;
 }
+
+.disabled {
+  opacity: 0.5;
+}
+
+.disabled:hover {
+  background-color: $caribbean-green;
+}

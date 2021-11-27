@@ -1,7 +1,9 @@
-import loading from './loading.json';
+import loading from './assets/loading.json';
+import buttonLoading from './assets/button-loading.json';
 
 export const SPINNER_TYPES = {
-  loading
+  loading,
+  buttonLoading
 };
 
 export const getOptions = ({ type, loop = true, autoplay = true, rendererSettings }) => ({

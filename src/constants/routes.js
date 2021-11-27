@@ -1,8 +1,15 @@
 import { ROLES } from './users';
 
 export const ROUTES = {
-  HOME: {
+  ORGANIZATIONS: {
     path: '/',
+    basePath: '',
+    publicRoute: true,
+    supportedRoles: [ROLES.USER],
+    exact: true
+  },
+  HOME: {
+    path: '/home',
     basePath: '',
     publicRoute: true,
     supportedRoles: [ROLES.USER],

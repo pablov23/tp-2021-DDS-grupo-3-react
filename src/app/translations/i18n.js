@@ -13,6 +13,15 @@ i18next.addResources('es', 'RescueHeader', {
   profile: 'Mi perfil'
 });
 
+i18next.addResources('es', 'Organizations', {
+  next: 'Siguiente',
+  label: 'Seleccione una organización',
+  // TODO: Delete on integration
+  organization1: 'Los Cachorros',
+  organization2: 'El Campito',
+  organization3: 'Rescate Animal'
+});
+
 i18next.addResources('es', 'HomeAdmin', {
   createAdmin: 'Crear nuevo usuario Administrador',
   addCharacteristic: 'Agregar caracteristicas de mascotas'

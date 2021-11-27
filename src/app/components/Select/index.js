@@ -23,7 +23,8 @@ function Select({
   label,
   labelClassName,
   className,
-  setFieldValue
+  setFieldValue,
+  customHandleChange
 }) {
   const handleChange = e => {
     setFieldValue(name, e.value);
@@ -37,7 +38,7 @@ function Select({
         styles={{ ...SELECT_STYLES, ...(error && ERROR_STYLES) }}
         theme={THEME}
         options={[...getSelectLabel(i18next.t('RescueCommon:selectOne')), ...options]}
-        onChange={handleChange}
+        onChange={customHandleChange || handleChange}
         onBlur={onBlur}
         value={selectedOption}
         defaultValue={selectedOption}
@@ -53,6 +54,7 @@ function Select({
 Select.propTypes = {
   options: arrayOf(option).isRequired,
   className: string,
+  customHandleChange: func,
   error: string,
   errorClassName: string,
   label: string,
