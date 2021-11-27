@@ -20,6 +20,7 @@ import PublicationSuccess from '~app/screens/PublicationSuccess';
 import ContactOwner from '~app/screens/ContactOwner';
 import EmergencyContact from '~app/screens/RegisterUser/screens/EmergencyContact';
 import Organizations from '~app/screens/Organizations';
+import GivePetForAdoption from '~app/screens/GivePetForAdoption';
 
 import styles from './styles.module.scss';
 import AuthenticatedRoute from './components/AuthenticatedRoute';
@@ -28,6 +29,7 @@ const AppRoutesContainer = () => (
   <ConnectedRouter history={history}>
     <div className={styles.container}>
       <Suspense>
+        <AuthenticatedRoute {...ROUTES.GIVE_PET_FOR_ADOPTION} component={GivePetForAdoption} />
         <AuthenticatedRoute {...ROUTES.ORGANIZATIONS} component={Organizations} />
         <AuthenticatedRoute {...ROUTES.EMERGENCY_CONTACT} component={EmergencyContact} />
         <AuthenticatedRoute

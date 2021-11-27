@@ -5,12 +5,22 @@ i18next.addResources('es', 'RescueCommon', {
   password: 'Contraseña',
   save: 'Guardar',
   title: 'Rescate de Patitas',
-  selectOne: 'Seleccione una opción'
+  selectOne: 'Seleccione una opción',
+  dog: 'Perro',
+  cat: 'Gato'
 });
 
 i18next.addResources('es', 'RescueHeader', {
   title: 'Rescate de Patitas',
   profile: 'Mi perfil'
+});
+
+i18next.addResources('es', 'GivePetDataForm', {
+  name: 'Nombre',
+  nickname: 'Apodo',
+  petType: 'Tipo de Mascota',
+  dog: i18next.getResource('es', 'RescueCommon', 'dog'),
+  cat: i18next.getResource('es', 'RescueCommon', 'cat')
 });
 
 i18next.addResources('es', 'Organizations', {

@@ -21,6 +21,7 @@ const RegisterUser = () => {
         form={RegisterUserForm}
         onSubmit={handleSubmit}
         validationSchema={VALIDATION_SCHEMA}
+        formClassName="full-height"
       />
     </div>
   );

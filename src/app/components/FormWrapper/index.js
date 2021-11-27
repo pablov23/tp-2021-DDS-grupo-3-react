@@ -18,7 +18,7 @@ const FormWrapper = ({
     validateOnMount={false}
     validationSchema={validationSchema}>
     {({ handleChange, handleSubmit, values, errors, setFieldValue, submitCount }) => (
-      <form className={cn('row full-width full-height', formClassName)} onSubmit={handleSubmit}>
+      <form className={cn('column full-width', formClassName)} onSubmit={handleSubmit}>
         <Children
           values={values}
           onChange={handleChange}

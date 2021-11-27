@@ -78,13 +78,6 @@ export const ROUTES = {
     supportedRoles: [ROLES.USER],
     exact: false
   },
-  PET_CARD: {
-    path: '/pets/:id',
-    basePath: '/pets',
-    publicRoute: true,
-    supportedRoles: [ROLES.USER],
-    exact: false
-  },
   PUBLICATION_SUCCESS: {
     path: '/publication/success',
     basePath: '/publication',
@@ -102,6 +95,20 @@ export const ROUTES = {
   EMERGENCY_CONTACT: {
     path: '/register/emergency-contact',
     basePath: '/',
+    publicRoute: true,
+    supportedRoles: [ROLES.USER],
+    exact: false
+  },
+  PET_CARD: {
+    path: '/pets/info/:id',
+    basePath: '/pets',
+    publicRoute: true,
+    supportedRoles: [ROLES.USER],
+    exact: false
+  },
+  GIVE_PET_FOR_ADOPTION: {
+    path: '/pets/register/for-adoption',
+    basePath: '/pets',
     publicRoute: true,
     supportedRoles: [ROLES.USER],
     exact: false

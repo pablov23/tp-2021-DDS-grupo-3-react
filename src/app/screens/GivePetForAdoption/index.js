@@ -6,13 +6,11 @@ import { useDispatch } from 'react-redux';
 import FormWrapper from '~app/components/FormWrapper';
 import { ROUTES } from '~constants/routes';
 
-import UserDataForm from '../../components/UserDataForm';
-import { INITIAL_VALUES, USER_FIELDS } from '../../components/UserDataForm/constants';
-import { VALIDATION_SCHEMA } from '../../components/UserDataForm/utils';
+import GivePetDataForm from './components/GivePetDataForm';
+import { INITIAL_VALUES, PET_FIELDS } from './components/GivePetDataForm/constants';
+import { VALIDATION_SCHEMA } from './components/GivePetDataForm/utils';
 
-import { STEP_NUMBER } from './constants';
-
-function RegisterOwner() {
+function GivePetForAdoption() {
   const dispatch = useDispatch();
   const handleSubmit = () => {
     // eslint-disable-next-line no-console
@@ -20,15 +18,15 @@ function RegisterOwner() {
   };
   return (
     <FormWrapper
-      form={UserDataForm}
-      fields={USER_FIELDS}
+      form={GivePetDataForm}
+      fields={PET_FIELDS}
       buttonText={i18next.t('UserDataForm:next')}
+      onSubmit={handleSubmit}
       initialValues={INITIAL_VALUES}
       validationSchema={VALIDATION_SCHEMA}
-      onSubmit={handleSubmit}
-      stepNumber={STEP_NUMBER}
+      formClassName="full-height"
     />
   );
 }
 
-export default RegisterOwner;
+export default GivePetForAdoption;

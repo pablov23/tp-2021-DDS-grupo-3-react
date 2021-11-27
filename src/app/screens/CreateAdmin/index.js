@@ -19,6 +19,7 @@ const CreateAdmin = () => {
         form={CreateAdminForm}
         onSubmit={handleSubmit}
         validationSchema={VALIDATION_SCHEMA}
+        formClassName="full-height"
       />
     </div>
   );
