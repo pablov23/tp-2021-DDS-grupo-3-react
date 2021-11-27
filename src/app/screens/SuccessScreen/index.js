@@ -11,7 +11,7 @@ import styles from './styles.module.scss';
 
 function SuccessScreen({ title, buttonText = i18next.t('SuccessScreen:homeButton'), customHandleClick }) {
   const history = useHistory();
-  const handleRedirectToHome = () => history.push(ROUTES.HOME.basePath);
+  const handleRedirectToHome = () => history.push(ROUTES.HOME.path);
   return (
     <RescueViewWrapper>
       <span className={styles.successTitle}>{title}</span>

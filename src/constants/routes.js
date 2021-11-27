@@ -119,5 +119,12 @@ export const ROUTES = {
     publicRoute: true,
     supportedRoles: [ROLES.USER],
     exact: false
+  },
+  REGISTER_FOUND_PET: {
+    path: '/pets/register/found',
+    basePath: '/pets',
+    publicRoute: true,
+    supportedRoles: [ROLES.USER],
+    exact: false
   }
 };

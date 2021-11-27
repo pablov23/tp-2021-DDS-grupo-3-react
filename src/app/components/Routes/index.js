@@ -22,6 +22,7 @@ import EmergencyContact from '~app/screens/RegisterUser/screens/EmergencyContact
 import Organizations from '~app/screens/Organizations';
 import RegisterPetForAdoption from '~app/screens/RegisterPet/screens/RegisterPetForAdoption';
 import RegisterLostPet from '~app/screens/RegisterPet/screens/RegisterLostPet';
+import RegisterFoundPet from '~app/screens/RegisterPet/screens/RegisterFoundPet';
 
 import styles from './styles.module.scss';
 import AuthenticatedRoute from './components/AuthenticatedRoute';
@@ -30,6 +31,7 @@ const AppRoutesContainer = () => (
   <ConnectedRouter history={history}>
     <div className={styles.container}>
       <Suspense>
+        <AuthenticatedRoute {...ROUTES.REGISTER_FOUND_PET} component={RegisterFoundPet} />
         <AuthenticatedRoute {...ROUTES.REGISTER_LOST_PET} component={RegisterLostPet} />
         <AuthenticatedRoute {...ROUTES.REGISTER_PET_FOR_ADOPTION} component={RegisterPetForAdoption} />
         <AuthenticatedRoute {...ROUTES.ORGANIZATIONS} component={Organizations} />

@@ -73,11 +73,46 @@ export const PET_FIELDS = [
   }
 ];
 
-export const INITIAL_VALUES = {
+export const FOUND_PET_FIELDS = [
+  {
+    field: Select,
+    name: PET_FIELDS_NAMES.PET_TYPE,
+    options: mapOptions(PETS_TYPES, FORM_TARGET)
+  },
+  {
+    field: Input,
+    name: PET_FIELDS_NAMES.AGE,
+    type: 'number'
+  },
+  {
+    field: Select,
+    name: PET_FIELDS_NAMES.SEX,
+    options: mapOptions(PETS_SEX, FORM_TARGET)
+  },
+  {
+    field: TextArea,
+    name: PET_FIELDS_NAMES.DESCRIPTION
+  },
+  {
+    field: Select,
+    name: PET_FIELDS_NAMES.BADGE,
+    options: mapOptions(BADGE_OPTIONS, FORM_TARGET)
+  },
+  {
+    field: FileUploader
+  }
+];
+
+export const MINIMUM_INITIAL_VALUES = {
+  [PET_FIELDS_NAMES.PET_TYPE]: '',
   [PET_FIELDS_NAMES.AGE]: '',
-  [PET_FIELDS_NAMES.DESCRIPTION]: '',
+  [PET_FIELDS_NAMES.SEX]: '',
+  [PET_FIELDS_NAMES.BADGE]: '',
+  [PET_FIELDS_NAMES.DESCRIPTION]: ''
+};
+
+export const INITIAL_VALUES = {
   [PET_FIELDS_NAMES.NAME]: '',
   [PET_FIELDS_NAMES.NICKNAME]: '',
-  [PET_FIELDS_NAMES.PET_TYPE]: '',
-  [PET_FIELDS_NAMES.SEX]: ''
+  ...MINIMUM_INITIAL_VALUES
 };

@@ -1,7 +1,8 @@
 @import 'imports';
 
 .button {
-  @extend .full-width;
+  @extend .full-width,
+  .medium;
 
   background-color: $caribbean-green;
   border-radius: 10px;

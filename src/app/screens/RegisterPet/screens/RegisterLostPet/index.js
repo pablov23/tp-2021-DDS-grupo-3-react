@@ -7,7 +7,7 @@ import FormWrapper from '~app/components/FormWrapper';
 import { ROUTES } from '~constants/routes';
 
 import RegisterPetDataForm from '../../components/RegisterPetDataForm';
-import { INITIAL_VALUES, PET_FIELDS } from '../../components/RegisterPetDataForm/constants';
+import { PET_FIELDS, INITIAL_VALUES } from '../../components/RegisterPetDataForm/constants';
 import { VALIDATION_SCHEMA } from '../../components/RegisterPetDataForm/utils';
 
 function RegisterLostPet() {
