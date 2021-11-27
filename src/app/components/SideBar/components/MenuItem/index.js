@@ -13,7 +13,13 @@ function MenuItem({ item, onClick, itemClassName = '', labelClassName = '' }) {
   });
 
   return (
-    <ItemComponent to={item.route?.path} className={styles.container} onClick={item?.onClick || handleClick}>
+    <ItemComponent
+      to={{
+        pathname: item.route?.path,
+        state: { nextViewPath: item.nextViewRoute?.path }
+      }}
+      className={styles.container}
+      onClick={item?.onClick || handleClick}>
       <div
         className={cn(
           { [styles.menuItemSelected]: isSelected, [styles.menuItemNotSelected]: !isSelected },

@@ -1,6 +1,6 @@
 import React from 'react';
 import { string, bool } from 'prop-types';
-import { useHistory } from 'react-router';
+import { useHistory, useLocation } from 'react-router';
 
 import FormWrapper from '~app/components/FormWrapper';
 import Header from '~app/components/Header';
@@ -13,10 +13,11 @@ import Links from './components/Links';
 import { VALIDATION_SCHEMA } from './utils';
 
 function Login({ title, signUp }) {
+  const location = useLocation();
   const history = useHistory();
   const handleSubmit = () => {
     // TODO: handle login
-    history.push(ROUTES.HOME.path);
+    history.push(location.state?.nextViewPath ? location.state.nextViewPath : ROUTES.HOME.path);
   };
   return (
     <div className={`row full-width full-height center middle space-between ${styles.container}`}>
