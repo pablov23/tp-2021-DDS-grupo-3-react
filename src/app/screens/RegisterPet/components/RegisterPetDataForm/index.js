@@ -5,9 +5,9 @@ import DataForm from '~app/components/DataForm';
 
 import { FORM_TARGET } from './constants';
 
-const GivePetDataForm = props => <DataForm target={FORM_TARGET} {...props} />;
+const RegisterPetDataForm = props => <DataForm target={FORM_TARGET} {...props} />;
 
-GivePetDataForm.propTypes = {
+RegisterPetDataForm.propTypes = {
   buttonText: string,
   errors: shape,
   fields: arrayOf(shape()),
@@ -17,4 +17,4 @@ GivePetDataForm.propTypes = {
   onClick: func
 };
 
-export default GivePetDataForm;
+export default RegisterPetDataForm;

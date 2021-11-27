@@ -6,21 +6,20 @@ import { useDispatch } from 'react-redux';
 import FormWrapper from '~app/components/FormWrapper';
 import { ROUTES } from '~constants/routes';
 
-import GivePetDataForm from './components/GivePetDataForm';
-import { INITIAL_VALUES, PET_FIELDS } from './components/GivePetDataForm/constants';
-import { VALIDATION_SCHEMA } from './components/GivePetDataForm/utils';
+import RegisterPetDataForm from '../../components/RegisterPetDataForm';
+import { INITIAL_VALUES, PET_FIELDS } from '../../components/RegisterPetDataForm/constants';
+import { VALIDATION_SCHEMA } from '../../components/RegisterPetDataForm/utils';
 
-function GivePetForAdoption() {
+function RegisterLostPet() {
   const dispatch = useDispatch();
   const handleSubmit = () => {
-    // eslint-disable-next-line no-console
-    dispatch(push(ROUTES.EMERGENCY_CONTACT.path));
+    dispatch(push(ROUTES.PUBLICATION_SUCCESS.path));
   };
   return (
     <FormWrapper
-      form={GivePetDataForm}
+      form={RegisterPetDataForm}
       fields={PET_FIELDS}
-      buttonText={i18next.t('UserDataForm:next')}
+      buttonText={i18next.t('RegisterPetDataForm:publish')}
       onSubmit={handleSubmit}
       initialValues={INITIAL_VALUES}
       validationSchema={VALIDATION_SCHEMA}
@@ -28,4 +27,4 @@ function GivePetForAdoption() {
   );
 }
 
-export default GivePetForAdoption;
+export default RegisterLostPet;

@@ -20,7 +20,7 @@ i18next.addResources('es', 'RescueHeader', {
   profile: 'Mi perfil'
 });
 
-i18next.addResources('es', 'GivePetDataForm', {
+i18next.addResources('es', 'RegisterPetDataForm', {
   name: 'Nombre',
   nickname: 'Apodo',
   petType: 'Tipo de Mascota',
@@ -34,7 +34,8 @@ i18next.addResources('es', 'GivePetDataForm', {
   female: i18next.getResource('es', 'RescueCommon', 'female'),
   badge: i18next.getResource('es', 'RescueCommon', 'badge'),
   yes: i18next.getResource('es', 'RescueCommon', 'yes'),
-  no: i18next.getResource('es', 'RescueCommon', 'no')
+  no: i18next.getResource('es', 'RescueCommon', 'no'),
+  publish: 'Publicar'
 });
 
 i18next.addResources('es', 'Organizations', {

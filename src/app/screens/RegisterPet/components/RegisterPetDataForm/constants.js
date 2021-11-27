@@ -4,7 +4,7 @@ import TextArea from '~app/components/TextArea';
 import { BADGE_OPTIONS, PETS_SEX, PETS_TYPES } from '~constants/pets';
 import { mapOptions } from '~utils/select';
 
-export const FORM_TARGET = 'GivePetDataForm';
+export const FORM_TARGET = 'RegisterPetDataForm';
 
 export const PET_FIELDS_NAMES = {
   NAME: 'name',

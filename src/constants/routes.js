@@ -106,8 +106,15 @@ export const ROUTES = {
     supportedRoles: [ROLES.USER],
     exact: false
   },
-  GIVE_PET_FOR_ADOPTION: {
+  REGISTER_PET_FOR_ADOPTION: {
     path: '/pets/register/for-adoption',
+    basePath: '/pets',
+    publicRoute: true,
+    supportedRoles: [ROLES.USER],
+    exact: false
+  },
+  REGISTER_LOST_PET: {
+    path: '/pets/register/lost',
     basePath: '/pets',
     publicRoute: true,
     supportedRoles: [ROLES.USER],
