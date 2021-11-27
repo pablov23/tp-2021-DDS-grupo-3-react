@@ -24,7 +24,6 @@ function GivePetForAdoption() {
       onSubmit={handleSubmit}
       initialValues={INITIAL_VALUES}
       validationSchema={VALIDATION_SCHEMA}
-      formClassName="full-height"
     />
   );
 }

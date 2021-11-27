@@ -7,7 +7,12 @@ i18next.addResources('es', 'RescueCommon', {
   title: 'Rescate de Patitas',
   selectOne: 'Seleccione una opción',
   dog: 'Perro',
-  cat: 'Gato'
+  cat: 'Gato',
+  male: 'Macho',
+  female: 'Hembra',
+  badge: '¿Tiene chapita?',
+  yes: 'Si',
+  no: 'No'
 });
 
 i18next.addResources('es', 'RescueHeader', {
@@ -20,7 +25,16 @@ i18next.addResources('es', 'GivePetDataForm', {
   nickname: 'Apodo',
   petType: 'Tipo de Mascota',
   dog: i18next.getResource('es', 'RescueCommon', 'dog'),
-  cat: i18next.getResource('es', 'RescueCommon', 'cat')
+  cat: i18next.getResource('es', 'RescueCommon', 'cat'),
+  age: 'Edad',
+  sex: 'Sexo',
+  description: 'Descripción física',
+  state: 'Estado',
+  male: i18next.getResource('es', 'RescueCommon', 'male'),
+  female: i18next.getResource('es', 'RescueCommon', 'female'),
+  badge: i18next.getResource('es', 'RescueCommon', 'badge'),
+  yes: i18next.getResource('es', 'RescueCommon', 'yes'),
+  no: i18next.getResource('es', 'RescueCommon', 'no')
 });
 
 i18next.addResources('es', 'Organizations', {
