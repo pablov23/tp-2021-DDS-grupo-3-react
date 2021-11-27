@@ -1,0 +1,45 @@
+@import 'imports';
+$tick-size: 35px;
+
+.file-input {
+  display: none;
+}
+
+.button-container {
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+.success-container {
+  @extend .row,
+  .full-width,
+  .center,
+  .middle;
+}
+
+.success-message {
+  color: $white;
+  font-size: 17px;
+  text-align: center;
+}
+
+.tick {
+  fill: $caribbean-green;
+  height: $tick-size;
+  margin-right: 10px;
+  width: $tick-size;
+}
+
+.upload-files-button {
+  @extend .medium,
+  .row,
+  .center,
+  .middle;
+
+  border-radius: 20px;
+  font-style: italic;
+}
+
+.upload-files-button-text {
+  margin-right: 5px;
+}

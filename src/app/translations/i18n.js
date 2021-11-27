@@ -35,7 +35,15 @@ i18next.addResources('es', 'RegisterPetDataForm', {
   badge: i18next.getResource('es', 'RescueCommon', 'badge'),
   yes: i18next.getResource('es', 'RescueCommon', 'yes'),
   no: i18next.getResource('es', 'RescueCommon', 'no'),
-  publish: 'Publicar'
+  publish: 'Publicar',
+  characteristicsTitle: 'Características',
+  characteristic1: 'Color de pelo',
+  characteristic2: 'Cantidad de patas'
+});
+
+i18next.addResources('es', 'FileUploader', {
+  title: 'Imagen (formatos permitidos: jpg, png, svg)',
+  uploadFile: 'Subir imagen'
 });
 
 i18next.addResources('es', 'Organizations', {
