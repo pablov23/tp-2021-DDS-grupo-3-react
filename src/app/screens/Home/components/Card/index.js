@@ -10,7 +10,7 @@ import styles from './styles.module.scss';
 const Card = ({ name, age, race, gender, image, id }) => {
   const dispatch = useDispatch();
   const handleClick = () => {
-    dispatch(push(`${ROUTES.PET_CARD.basePath}/${id}`));
+    dispatch(push(`${ROUTES.PET_CARD.basePath}/info/${id}`));
   };
   return (
     <div className={styles.card} onClick={handleClick}>

@@ -1,7 +1,8 @@
 @import 'imports';
+$logo-size: 50px;
 
 .container {
-  background-color: $green-cyan;
+  background-color: $te-papa-green;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -22,14 +23,29 @@
   overflow-y: auto;
 }
 
-.title {
+.header-container {
   @extend .row,
   .full-width,
+  .space-between;
+
+  margin: 40px 0;
+  padding: 0 50px;
+}
+
+.logo-container {
+  @extend .row,
   .center,
   .middle;
+}
 
+.logo {
+  fill: $caribbean-green;
+  height: $logo-size;
+  margin-right: 10px;
+  width: $logo-size;
+}
+
+.title {
   color: $white;
   font-size: 28px;
-  margin: 40px 0;
-  text-transform: uppercase;
 }

@@ -27,7 +27,7 @@ $sub-item-size: 15px;
 }
 
 .sub-menu-title:hover {
-  color: $green-cyan;
+  color: $te-papa-green;
 }
 
 .sub-menu-title-selected {
@@ -47,13 +47,13 @@ $sub-item-size: 15px;
   @extend %menu-item,
   .semi-bold;
 
-  color: $green-cyan;
+  color: $te-papa-green;
 }
 
 .border {
   @extend .self-center;
 
-  background-color: $green-cyan;
+  background-color: $te-papa-green;
   border-radius: 3px 0 0 3px;
   height: 35px;
   width: 5px;
@@ -64,11 +64,11 @@ $sub-item-size: 15px;
 }
 
 .menu-item-not-selected:hover > div > h2 {
-  color: $green-cyan;
+  color: $te-papa-green;
 }
 
 .menu-item-not-selected:hover > div > svg path {
-  fill: $green-cyan;
+  fill: $te-papa-green;
 }
 
 .menu-icon {
@@ -76,19 +76,19 @@ $sub-item-size: 15px;
   width: $menu-icon-size;
 
   &.menu-icon-img-selected path {
-    fill: $green-cyan;
+    fill: $te-papa-green;
   }
 }
 
 .menu-icon-selected {
-  background-color: $green-cyan;
+  background-color: $te-papa-green;
   border-radius: 30px;
 }
 
 .sub-menu-container {
   @extend .full-width;
 
-  color: $green-cyan;
+  color: $te-papa-green;
 }
 
 .sub-item {

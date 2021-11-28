@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router';
 
 import { ROUTES } from '~constants/routes';
+import { ReactComponent as Foot } from '~assets/foot.svg';
 
 import { POSTS } from '../Home/constants';
 
@@ -21,8 +22,9 @@ const PetCard = () => {
 
   return (
     <div className={styles.container}>
-      <div onClick={goToHome} className={styles.title}>
-        {i18next.t('Home:title')}
+      <div onClick={goToHome} className={styles.headerContainer}>
+        <Foot className={styles.logo} alt="icon" />
+        <span className={styles.title}>{i18next.t('Home:title')}</span>
       </div>
       <div className={styles.card}>
         <img src={image} className={styles.pic} />

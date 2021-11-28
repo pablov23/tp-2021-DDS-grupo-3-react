@@ -1,5 +1,7 @@
 @import 'imports';
 $image-width: 40px;
+$card-radius: 20px;
+$logo-size: 50px;
 
 .container {
   @extend .full-width,
@@ -7,21 +9,22 @@ $image-width: 40px;
   .center,
   .middle;
 
-  background-color: $green-cyan;
+  background-color: $te-papa-green;
   height: 100vh;
 }
 
 .card {
   @extend .column,
   .center,
-  .space-around;
+  .space-between;
 
   background-color: $white;
-  box-shadow: 8px 8px 3px $green-sheen;
-  height: 700px;
+  border-radius: $card-radius;
+  box-shadow: 8px 8px 3px $te-papa-green;
+  height: 650px;
   margin: 15px;
-  padding: 0 15px 15px;
-  width: 600px;
+  padding: 0 0 15px;
+  width: 550px;
 }
 
 .texts {
@@ -54,31 +57,45 @@ $image-width: 40px;
 }
 
 .pic {
-  width: 500px;
+  border-top-left-radius: $card-radius;
+  border-top-right-radius: $card-radius;
+  width: 100%;
 }
 
-.title {
+.header-container {
   @extend .row,
   .full-width,
   .center,
   .middle;
 
-  color: $white;
   cursor: pointer;
+  margin: 10px 0 20px;
+}
+
+.logo {
+  fill: $caribbean-green;
+  height: $logo-size;
+  margin-right: 10px;
+  width: $logo-size;
+}
+
+.title {
+  color: $white;
   font-size: 28px;
-  margin: 40px;
-  text-transform: uppercase;
 }
 
 .button {
-  background-color: $teal-blue;
+  @extend .medium;
+
+  background-color: $caribbean-green;
   border-radius: 10px;
   color: $white;
   height: 60px;
   margin-top: 20px;
+  text-transform: uppercase;
   width: 290px;
 
   &:hover {
-    background-color: rgba($teal-blue, 0.3);
+    background-color: $green-cyan;
   }
 }

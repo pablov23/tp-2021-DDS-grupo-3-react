@@ -16,7 +16,7 @@ i18next.addResources('es', 'RescueCommon', {
 });
 
 i18next.addResources('es', 'RescueHeader', {
-  title: 'Rescate de Patitas',
+  title: i18next.getResource('es', 'RescueCommon', 'title'),
   profile: 'Mi perfil'
 });
 
@@ -46,6 +46,12 @@ i18next.addResources('es', 'FileUploader', {
   uploadFile: 'Subir imagen'
 });
 
+i18next.addResources('es', 'LoginAndRegisterButtons', {
+  login: 'Iniciar sesión',
+  withoutUser: '¿No tienes cuenta?',
+  register: 'Registrate'
+});
+
 i18next.addResources('es', 'Organizations', {
   next: 'Siguiente',
   label: 'Seleccione una organización',
@@ -61,7 +67,7 @@ i18next.addResources('es', 'HomeAdmin', {
 });
 
 i18next.addResources('es', 'RescueViewWrapper', {
-  title: 'Rescate de Patitas'
+  title: i18next.getResource('es', 'RescueCommon', 'title')
 });
 
 i18next.addResources('es', 'PersonHeader', {
@@ -100,7 +106,7 @@ i18next.addResources('en', 'Validations', {
 });
 
 i18next.addResources('es', 'Home', {
-  title: 'Rescate de patitas'
+  title: i18next.getResource('es', 'RescueCommon', 'title')
 });
 
 i18next.addResources('es', 'PetCard', {

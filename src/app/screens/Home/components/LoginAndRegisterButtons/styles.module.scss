@@ -1,0 +1,28 @@
+@import 'imports';
+
+.container {
+  width: 250px;
+}
+
+.button {
+  margin-bottom: 10px;
+}
+
+.register-container {
+  @extend .row,
+  .full-width,
+  .center,
+  .middle;
+
+  color: $white;
+}
+
+.register {
+  color: $caribbean-green;
+  margin-left: 5px;
+  text-decoration: underline;
+}
+
+.register:hover {
+  color: $green-cyan;
+}
