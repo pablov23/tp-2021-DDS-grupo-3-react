@@ -1,8 +1,9 @@
 @import 'imports';
 
 .menu-items-container {
-  @extend .p-left-4,
-  .full-width;
+  @extend .full-width;
+
+  padding: 0 20px;
 }
 
 .side-bar {
@@ -16,8 +17,6 @@
 }
 
 .sticky {
-  @extend .full-height;
-
   position: sticky;
   top: 0;
 }
